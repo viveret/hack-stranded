@@ -1,0 +1,100 @@
+These are commands for the CMS (Content Modification System).
+
+Each file-man command sets the current file, file settings apply to the current file.
+Folders are a special file. therefore the following applies to folders too.
+
+Versions are extracted by mod-time: year.month.day.hour.minute
+
+
+### Regular definitions
+
+## Permisions
+any = 255
+none = 0
+engine-core = 1
+engine-regular = 2
+engine-other = 3
+other-core = 4 - 7
+# free access
+other = 8 - 255
+
+
+## File types
+folder, directory = container
+file = n/a type, decide based on name
+link = pointer to file
+txt, text = c-string
+bin, raw, no extension = binary
+mesh, .any assimp supported formats
+image, texture, any devIL supported formats
+sound, noise, any BASS supported formats
+menu = menu descriptor
+script, lua, or any other language-specific scipts
+xml, yaml, or other markup-languages
+
+
+
+
+### File management commands
+
+# Add a file
+add/include [type] [file-name]
+
+# Delete a file
+remove [file]
+
+# Pre claim a file
+create/claim [type] [name]
+
+# Only add if already exists
+replace [name] [new file-name]
+
+# Modify part of file (must be ascii or have pre-defined functions)
+mod-part [name] [to be changed] [value]
+
+
+
+### File settings commands
+
+# Require file to have needs
+require [type] [name] [condition values]
+
+# Where type = file-exists,
+		name = n/a,
+		conditions = true, false
+	type = version
+		name = version-needed
+		conditions = file-permissions
+	type = file-permission,
+		name = get, set
+		conditions = less-than, greater-than, lequal, gequal, equal, [number]
+	type = owner-name
+		name = owner's name
+		conditions = equal-to, true/false
+	type = owner-perm-level
+		name = owner's name
+		conditions = file-permission
+	type = enable / disable
+		name = any
+		conditions = n/a
+		
+# Set file specific values
+mod/set [file-name] [mod-name] [value]
+
+# Default mod-names:
+	file-permission-get	
+	file-permission-set
+	type
+	name
+	owner
+	symbolic-fs-pointer
+	server-required
+
+
+
+### Content Script Syntax
+
+inside '' = enter folder or archive
+leave = leave current folder or archive
+
+include '' = check folder for script, otherwise probe.

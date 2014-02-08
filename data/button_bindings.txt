@@ -1,0 +1,5 @@
+escape		quit
+tab		pause-toggle
+`		debug-toggle
+return		chat
+

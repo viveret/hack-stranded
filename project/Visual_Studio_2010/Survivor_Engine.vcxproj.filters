@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="app">
+      <UniqueIdentifier>{fea99fc9-c716-4cf2-9609-51be7eb6c3fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="content">
+      <UniqueIdentifier>{4c3019ad-fcab-4864-aa43-015ebf38012a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="debug">
+      <UniqueIdentifier>{8d2103f9-f15a-4bb6-aa48-247302e1bad4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine">
+      <UniqueIdentifier>{472e80c7-0dee-47dc-8232-ecd78ac5af51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="filesys">
+      <UniqueIdentifier>{de8b2e33-38e7-4e51-b566-6e283ca3436b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{e5ced99d-7fe3-4b1b-a719-1b3c184be561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gl">
+      <UniqueIdentifier>{82ce1b1d-3325-4dcb-a578-d6884e43857f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui">
+      <UniqueIdentifier>{fd2b8900-fa00-48c4-a6d8-ac119e65557a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{081bce94-61fd-4ee7-8bc4-ea06836c406c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="menu">
+      <UniqueIdentifier>{bc1c9c1e-16b3-4b6f-a7f5-5dd29332a157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="module">
+      <UniqueIdentifier>{c2addfd4-c112-4687-b40d-566f1a298a94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network">
+      <UniqueIdentifier>{13bb182d-448c-4d38-9a0d-a67b94551c04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="os">
+      <UniqueIdentifier>{120d9e50-bdcc-4bf9-a0fa-5d575a770615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="os\linux">
+      <UniqueIdentifier>{3a678e8e-0a7a-484f-959a-2d3829097fe8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="os\win32">
+      <UniqueIdentifier>{6a168848-bdb8-4e95-bd1a-b6b78e7f0e74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="physics">
+      <UniqueIdentifier>{c0a40761-3fb1-4c20-9f52-4327eb088362}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pugixml">
+      <UniqueIdentifier>{d491df18-01df-430d-be54-cfd6b18cd3e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render">
+      <UniqueIdentifier>{e517ec5b-ca79-42cf-bf38-3e84a396cab3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ss">
+      <UniqueIdentifier>{b843d20c-6853-4fc6-8f64-818bbf81a588}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{63301520-49b3-456f-a04d-347de81e9f36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ss\ss_lib">
+      <UniqueIdentifier>{0f3bd2a4-722c-4e34-9098-8fc256d8fe93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stranded">
+      <UniqueIdentifier>{8ac091f2-7adf-4192-b294-d7050e59e0f0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\app\App.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\app\App_Win32.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\app\File_Stream.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\app\Interactive_Text.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\app\Window.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\app\XBox.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\content\Content.cpp">
+      <Filter>content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\content\File_Types.cpp">
+      <Filter>content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\content\Manager.cpp">
+      <Filter>content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\content\Resources.cpp">
+      <Filter>content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\content\VFS.cpp">
+      <Filter>content</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\debug\Debug.cpp">
+      <Filter>debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\debug\Exception.cpp">
+      <Filter>debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\debug\Log.cpp">
+      <Filter>debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\debug\Memory.cpp">
+      <Filter>debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine\Console.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine\Engine.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\engine\Engine_Draw.cpp">
+      <Filter>engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\filesys\File_Stats.cpp">
+      <Filter>filesys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\filesys\Filesystem.cpp">
+      <Filter>filesys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\game\Dialogue.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\game\Game.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\game\Game_Update.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\game\Map.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\game\Map_2D_Tile.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\game\Map_Height.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gl\OpenGL.cpp">
+      <Filter>gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gl\se_gl.cpp">
+      <Filter>gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gl\Shader.cpp">
+      <Filter>gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gl\Ver_110.cpp">
+      <Filter>gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gl\Ver_300.cpp">
+      <Filter>gl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gui\Button.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gui\GUI.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gui\Message_Log.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\math\Math.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\menu\Menu.cpp">
+      <Filter>menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\menu\Menu_Base.cpp">
+      <Filter>menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\menu\Menu_Buttons.cpp">
+      <Filter>menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\menu\Menu_Internals.cpp">
+      <Filter>menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\menu\Menu_Load.cpp">
+      <Filter>menu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\module\Events.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\module\Module.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\module\Thread.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\network\Client.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\network\Host.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\network\Net.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\network\Socket.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\os\Bass.cpp">
+      <Filter>os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\os\File.cpp">
+      <Filter>os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\os\Input.cpp">
+      <Filter>os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\os\Threader.cpp">
+      <Filter>os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\os\win32\MainWinProc.cpp">
+      <Filter>os\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\physics\Object.cpp">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\physics\Object_Effects.cpp">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\physics\Physics.cpp">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\pugixml\pugixml.cpp">
+      <Filter>pugixml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\render\Font.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\render\Material.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\render\Mesh.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\render\Mesh_Load.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\render\Mesh_SMDL.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\render\Mesh_VBO.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\render\Particle_System.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\render\Texture.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ss\Survivor_Script.cpp">
+      <Filter>ss</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utility\Cipher.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utility\Draw_Utility.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utility\Functions.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utility\Lua.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utility\Math.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utility\MD5.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utility\Timer.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\utility\Utility.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\User_Space.cpp" />
+    <ClCompile Include="..\..\src\ss\ss_lib\Core.cpp">
+      <Filter>ss\ss_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ss\ss_lib\Core_Funcs.cpp">
+      <Filter>ss\ss_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ss\ss_lib\Core_Types.cpp">
+      <Filter>ss\ss_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ss\ss_lib\File_Sys.cpp">
+      <Filter>ss\ss_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\ss\ss_lib\Math.cpp">
+      <Filter>ss\ss_lib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\os\Input_Codes.cpp">
+      <Filter>os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\stranded\Stranded_Core.cpp">
+      <Filter>stranded</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\app\App.hpp">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\app\App_Win32.hpp">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\app\File_Stream.hpp">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\app\Interactive_Text.hpp">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\app\Window.hpp">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\app\XBox.hpp">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\content\Content.hpp">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\content\File_Types.hpp">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\content\Manager.hpp">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\content\Resources.hpp">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\content\VFS.hpp">
+      <Filter>content</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\debug\Debug.hpp">
+      <Filter>debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\debug\Exception.hpp">
+      <Filter>debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\debug\Log.hpp">
+      <Filter>debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\debug\Memory.hpp">
+      <Filter>debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\engine\Console.hpp">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\engine\Engine.hpp">
+      <Filter>engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\filesys\File_Stats.hpp">
+      <Filter>filesys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\filesys\Filesystem.hpp">
+      <Filter>filesys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\game\Dialogue.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\game\Game.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\game\Map.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\game\Map_2D_Tile.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\game\Map_Height.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gl\glVersions.hpp">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gl\OpenGL.hpp">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gl\se_gl.hpp">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gl\Shader.hpp">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gui\Button.hpp">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gui\GUI.hpp">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gui\Message_Log.hpp">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gui\Widget.hpp">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\Math.hpp">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\Matrix.hpp">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\Vector.hpp">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\Vector2.hpp">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\Vector3.hpp">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\math\Vector4.hpp">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\menu\Menu.hpp">
+      <Filter>menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\menu\Menu_Buttons.hpp">
+      <Filter>menu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\module\Event_Defs.hpp">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\module\Events.hpp">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\module\Module.hpp">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\module\Thread.hpp">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\network\Net.hpp">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\os\Bass.hpp">
+      <Filter>os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\os\File.hpp">
+      <Filter>os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\os\Input.hpp">
+      <Filter>os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\os\Input_Codes.hpp">
+      <Filter>os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\os\Linux_Module.hpp">
+      <Filter>os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\os\Threader.hpp">
+      <Filter>os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\os\Win32_Module.hpp">
+      <Filter>os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\os\linux\Threader.hpp">
+      <Filter>os\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\os\win32\Icons.hpp">
+      <Filter>os\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\os\win32\Threader.hpp">
+      <Filter>os\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\physics\Object.hpp">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\physics\Object_Effects.hpp">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\physics\Physics.hpp">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\pugixml\pugiconfig.hpp">
+      <Filter>pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\pugixml\pugixml.hpp">
+      <Filter>pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\render\Camera.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\render\Font.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\render\Material.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\render\Mesh.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\render\Particle_System.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\render\Render.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\render\Texture.hpp">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ss\Survivor_Script.hpp">
+      <Filter>ss</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utility\Array.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utility\Cipher.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utility\Draw_Utility.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utility\Functions.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utility\Lua.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utility\Math.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utility\MD5.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utility\pugiconfig.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utility\pugixml.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utility\Timer.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\utility\Utility.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Core.hpp" />
+    <ClInclude Include="..\..\src\S_Engine.hpp" />
+    <ClInclude Include="..\..\src\Types.hpp" />
+    <ClInclude Include="..\..\src\ss\ss_lib\Core.hpp">
+      <Filter>ss\ss_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ss\ss_lib\File_Sys.hpp">
+      <Filter>ss\ss_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ss\ss_lib\Math.hpp">
+      <Filter>ss\ss_lib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\stranded\Stranded_Core.hpp">
+      <Filter>stranded</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

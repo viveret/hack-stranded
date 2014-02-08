@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu title="Survivor">
+  <button type="menu" show="Singleplayer" goto="back" x="0" y="-100" />
+</menu>

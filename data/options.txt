@@ -1,0 +1,13 @@
+texture load:fast
+record load history:true
+log unfound files:false
+force old shaders:false
+force old rtt:false
+force old vbo:false
+print extensions:false
+
+clean:false
+texture:normalTP
+fullscreen:false
+master_volume:15
+sensitivity:50

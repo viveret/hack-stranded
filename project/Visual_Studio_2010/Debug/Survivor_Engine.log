@@ -1,0 +1,131 @@
+﻿Build started 11/10/2013 10:54:54 AM.
+     1>Project "F:\Programming\Stranded\project\Visual_Studio_2010\Survivor_Engine.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Survivor_Engine.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /D _DEBUG /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\gl\Shader.cpp
+         Shader.cpp
+     1>f:\programming\stranded\src\gl\shader.cpp(197): warning C4390: ';' : empty controlled statement found; is this the intent?
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(..\..\..\build\Survivor_Engine) does not match the Linker's OutputFile property value (Survivor_Engine). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Programming\Stranded\project\Visual_Studio_2010\Debug\..\..\..\build\Survivor_Engine.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\..\..\..\build\Survivor_Engine.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\Programming\Stranded\project\Visual_Studio_2010\Debug\..\..\..\build\Survivor_Engine.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Programming\Stranded\project\Visual_Studio_2010\Debug\..\..\..\build\Survivor_Engine.lib" /MACHINE:X86 Debug\App.obj
+         Debug\App_Win32.obj
+         Debug\File_Stream.obj
+         Debug\Interactive_Text.obj
+         Debug\Window.obj
+         Debug\XBox.obj
+         Debug\Content.obj
+         Debug\File_Types.obj
+         Debug\Manager.obj
+         Debug\Resources.obj
+         Debug\VFS.obj
+         Debug\Debug.obj
+         Debug\Exception.obj
+         Debug\Log.obj
+         Debug\Memory.obj
+         Debug\Console.obj
+         Debug\Engine.obj
+         Debug\Engine_Draw.obj
+         Debug\Filesystem.obj
+         Debug\File_Stats.obj
+         Debug\Dialogue.obj
+         Debug\Game.obj
+         Debug\Game_Update.obj
+         Debug\Map.obj
+         Debug\Map_2D_Tile.obj
+         Debug\Map_Height.obj
+         Debug\OpenGL.obj
+         Debug\se_gl.obj
+         Debug\Shader.obj
+         Debug\Ver_110.obj
+         Debug\Ver_300.obj
+         Debug\Button.obj
+         Debug\GUI.obj
+         Debug\Message_Log.obj
+         Debug\main.obj
+         Debug\Math.obj
+         Debug\Menu.obj
+         Debug\Menu_Base.obj
+         Debug\Menu_Buttons.obj
+         Debug\Menu_Internals.obj
+         Debug\Menu_Load.obj
+         Debug\Events.obj
+         Debug\Module.obj
+         Debug\Thread.obj
+         Debug\Client.obj
+         Debug\Host.obj
+         Debug\Net.obj
+         Debug\Socket.obj
+         Debug\Bass.obj
+         Debug\File.obj
+         Debug\Input.obj
+         Debug\Input_Codes.obj
+         Debug\Threader.obj
+         Debug\MainWinProc.obj
+         Debug\Object.obj
+         Debug\Object_Effects.obj
+         Debug\Physics.obj
+         Debug\pugixml.obj
+         Debug\Font.obj
+         Debug\Material.obj
+         Debug\Mesh.obj
+         Debug\Mesh_Load.obj
+         Debug\Mesh_SMDL.obj
+         Debug\Mesh_VBO.obj
+         Debug\Particle_System.obj
+         Debug\Texture.obj
+         Debug\Core.obj
+         Debug\Core_Funcs.obj
+         Debug\Core_Types.obj
+         Debug\File_Sys.obj
+         Debug\Math.obj
+         Debug\Survivor_Script.obj
+         Debug\Stranded_Core.obj
+         Debug\User_Space.obj
+         Debug\Cipher.obj
+         Debug\Draw_Utility.obj
+         Debug\Functions.obj
+         Debug\Lua.obj
+         Debug\Math.obj
+         Debug\MD5.obj
+         Debug\Timer.obj
+         Debug\Utility.obj /NODEFAULTLIB:LIBCMTD /NODEFAULTLIB:LIBCPMTD 
+         LINK : F:\Programming\Stranded\project\Visual_Studio_2010\Debug\..\..\..\build\Survivor_Engine.exe not found or not built by the last incremental link; performing full link
+     1>Debug\Math.obj : warning LNK4042: object specified more than once; extras ignored
+     1>Debug\Math.obj : warning LNK4042: object specified more than once; extras ignored
+     1>freetype2412MT_D.lib(autofit.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(autofit.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(bdf.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(bdf.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(cff.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(cff.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(ftbase.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(ftbase.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(ftbitmap.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(ftbitmap.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(ftdebug.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(ftdebug.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(ftgzip.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(ftgzip.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(ftinit.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(ftinit.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(ftlzw.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(ftlzw.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(ftsystem.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(ftsystem.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(smooth.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(smooth.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(pcf.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(pcf.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(pfr.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(pfr.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(psaux.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(psaux.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(pshinter.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(pshinter.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(psmodule.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(psmodule.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(raster.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(raster.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(sfnt.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(sfnt.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(truetype.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(truetype.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(type1.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(type1.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(type1cid.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(type1cid.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(type42.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(type42.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+     1>freetype2412MT_D.lib(winfnt.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'freetype2412MT_D.lib(winfnt.obj)' or at 'F:\Programming\Stranded\build\vc100.pdb'; linking object as if no debug info
+         Survivor_Engine.vcxproj -> F:\Programming\Stranded\project\Visual_Studio_2010\Debug\..\..\..\build\Survivor_Engine.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"F:\Programming\Stranded\project\Visual_Studio_2010\Debug\..\..\..\build\Survivor_Engine.exe;#1" /manifest Debug\..\..\..\build\Survivor_Engine.exe.intermediate.manifest
+       CopyFilesToOutputDirectory:
+         Copying file from "Debug\..\..\..\build\Survivor_Engine.pdb" to "F:\Programming\Stranded\project\Visual_Studio_2010\Debug\Survivor_Engine.pdb".
+       FinalizeBuildStatus:
+         Deleting file "Debug\Survivor_Engine.unsuccessfulbuild".
+         Touching "Debug\Survivor_Engine.lastbuildstate".
+     1>Done Building Project "F:\Programming\Stranded\project\Visual_Studio_2010\Survivor_Engine.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:33.52

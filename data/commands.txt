@@ -1,0 +1,31 @@
+TYPE_COMMAND>OBJECT-INFO,ETC|WAIT UNTIL COMPLETED
+
+AI_SPAWN>AINAME-posx,posy|
+AI_MOVE>AINAME-posx,posy|
+AI_SPEAK>AINAME-what|
+AI_DIE>AINAME|
+AI_GOD>AINAME-1 or 0| god or not god
+AI_HEALTH>AINAME-number|
+AI_ADDHEALTH>AINAME-number|
+AI_MAXHEALTH>AINAME-number|
+AI_FOLLOW>AINAME-followname,1 or 0| follow or not follow
+AI_GIVEWEP>AINAME-wep,ammo|
+
+SOUND_PLAY>sound-volume|
+SOUND_PAUSE>channel|0 for all
+SOUND_RESUME>channel|0 for all
+SOUND_NEWSONG>number|0 for rand
+
+GAME_LOAD>mapname,posx,posy|
+GAME_SAVE>savename|
+GAME_DATE>SET-yr,mnth,day,hr,min,sec|
+GAME_DATE>ADD-yr,mnth,day,hr,min,sec|
+GAME_NEWCHKPT>NUMNEW-chkpt txt file num,etc|add checkpoint to list
+GAME_NUMCHKPT>NEWNUM|limit to show
+GAME_RESETCHPT>NUMCHKPT|0 for all
+GAME_NEWPART>partnum|
+GAME_NEWCHAPTER>chapternum|
+GAME_PLAYING>1 or 0|
+
+
+

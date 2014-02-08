@@ -1,0 +1,19 @@
+# This is the configuration file for SE Interactive Text
+# by default, each line specifies word aliases (Word = Action)
+# A blank action (X = ) specifies filler (not processed)
+# Special characters other than placeholders are not allowed
+# A list of actions can be found in the docs
+
+
+# Movement actions
+
+hurl = throw
+yell = say
+run = move
+walk = move
+sprint = move
+
+# Fillers
+to =
+for =
+at =

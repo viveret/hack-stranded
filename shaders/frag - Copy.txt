@@ -1,0 +1,99 @@
+#version 110
+
+uniform sampler2D tex;
+						
+varying float Light_intensity;	  
+varying vec4 Light_Pos;	 
+varying float Light_Dist;
+varying vec4 Light_Col;
+varying vec3 lightDir,normal;
+varying vec4 Vert_Pos;	  
+uniform vec4 myAmbient;
+varying vec3 my_Pos;
+
+uniform bool Light_Enabled,Fog,Enabled,Tex_Enabled;
+
+float rand(vec2 n)
+{
+	return 0.5 + 0.5 *
+    fract(sin(dot(n.xy, vec2(12.9898, 78.233)))* 43758.5453);
+}
+
+void main()
+{	   
+	float ColMax=255.0;
+	vec4 nTex;
+	if(Tex_Enabled)
+	{
+		 nTex= texture2D(tex,gl_TexCoord[0].st);
+	
+		nTex.r*=gl_Color.r;
+		nTex.g*=gl_Color.g;
+		nTex.b*=gl_Color.b;
+		nTex.a*=gl_Color.a;
+	}
+	else
+	{
+		nTex=gl_Color;
+	}
+
+
+	float Average=(nTex.r+nTex.g+nTex.b)/3.0;
+				   
+	//nTex.r=Average;
+	//nTex.g=Average;
+	//nTex.b=Average;
+	
+		   
+	//sepia				  
+	//vec2 sepr*=//vec2(200.0/ColMax,225.0/ColMax);
+	//vec2 sepg*=;//vec2(145.0/ColMax,170.0/ColMax);
+	//vec2 sepb*=;//vec2(35.0/ColMax,60.0/ColMax);
+
+	//nTex.r*=225.0/ColMax;//*Light_intensity;//rand(sepr);
+	//nTex.g*=170.0/ColMax;//*Light_intensity;//rand(sepg); 
+	//nTex.b*=60.0/ColMax;//*Light_intensity;//rand(sepb);
+
+	if(Light_Enabled)
+	{
+		float AddLight=0.;
+									
+					
+		vec3 LightPos=vec3(my_Pos.x+gl_FragCoord.x-Light_Pos.x,my_Pos.y+gl_FragCoord.y-Light_Pos.y,my_Pos.z+gl_FragCoord.z-Light_Pos.z);				
+
+		float LightDist=Light_Dist;//sqrt(LightPos.x*LightPos.x+LightPos.y*LightPos.y+LightPos.z*LightPos.z);	
+	
+		if(LightDist>0.)
+		{
+			AddLight=1./(LightDist*0.1);//(1./LightDist*1.);//Light_intensity;
+			//AddLight-=AddLight*0.001;
+		}
+		AddLight+=myAmbient.a;
+		//AddLight*=max(dot(lightDir,normalize(normal)),0.);
+
+		if(AddLight>1.){AddLight=1.;}
+		if(AddLight<0.){AddLight=0.;}
+
+		//-darkness__________lightcolor-
+														 //*2.*(Light_Col.a*AddLight)
+		
+		if(LightDist>0.)
+		{
+			vec4 AddLightCol=vec4((nTex.r*2.*(1.-Light_Col.a*AddLight)+Light_Col.r*Light_Col.a*AddLight)/2.,(nTex.g*2.*(1.-Light_Col.a*AddLight)+Light_Col.g*Light_Col.a*AddLight)/2.,(nTex.b*2.*(1.-Light_Col.a*AddLight)+Light_Col.b*Light_Col.a*AddLight)/2.,0.);
+		
+			//vec4 AddLightCol=vec4(Light_Col.r*AddLight,Light_Col.g*AddLight,Light_Col.b*AddLight,abs(Light_Col.a*AddLight));
+							 
+			nTex.r=AddLightCol.r;
+			nTex.g=AddLightCol.g;
+			nTex.b=AddLightCol.b;
+		}
+							
+		nTex.r*=AddLight;
+		nTex.g*=AddLight;
+		nTex.b*=AddLight;
+	}
+
+	//nTex.r=gl_Position.x*0.01;
+
+	gl_FragColor = nTex;
+}

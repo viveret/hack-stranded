@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<item name="pistol" type="ranged" mesh="pistol.xml" skin="grey.bmp" weight="1.4" condition="1" accuracy="1" range_x="0" range_z="0" damage="2" mag_size="5" bps="1" speed="1" strength="1" loudness="1" size="1" auto="0">
+  <ammo />
+</item>

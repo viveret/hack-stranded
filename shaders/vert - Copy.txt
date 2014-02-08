@@ -1,0 +1,57 @@
+#version 110	  
+
+varying float Light_intensity;
+varying vec4 Light_Pos;
+varying float Light_Dist;
+varying vec3 lightDir,normal;
+varying vec4 Light_Col;
+varying vec3 my_Pos;
+
+uniform bool Light_Enabled,Fog_Enabled,Tex_Enabled;	
+varying vec4 Vert_Pos;
+
+void main()
+{
+	vec4 Pos=vec4(gl_Vertex);
+	gl_Position = gl_ModelViewProjectionMatrix * Pos;//ftransform(); 
+	
+	Vert_Pos=gl_Position;	
+
+	vec4 nCol=gl_Color;
+
+	my_Pos=gl_Vertex.xyz;
+
+	if(Light_Enabled)
+	{
+		Light_Pos=gl_LightSource[0].position;
+
+		lightDir = normalize(vec3(gl_LightSource[0].position));
+		Light_intensity =dot(lightDir,normalize(gl_Vertex.xyz));
+		normal = normalize(gl_NormalMatrix * gl_Normal);
+		
+		Light_Col=gl_LightSource[0].ambient;
+		Light_Pos=gl_LightSource[0].position;
+
+																//gl_Vertex.y-
+		vec3 LightPos=vec3(gl_LightSource[0].position.x-gl_Vertex.x,gl_LightSource[0].position.y-gl_Vertex.y,gl_LightSource[0].position.z-gl_Vertex.z);
+		Light_Dist=sqrt(LightPos.x*LightPos.x+LightPos.y*LightPos.y+LightPos.z*LightPos.z);
+		//nCol.r*=1./(Light_Dist*0.01);
+		//nCol.g*=1./(Light_Dist*0.01);
+		//nCol.b*=1./(Light_Dist*0.01);
+		//if(Light_Dist>50.){Light_Dist=-1.;}
+	}
+
+	//vec3 FogStart=vec3();
+
+	float FogDist=sqrt(Vert_Pos.x*Vert_Pos.x+Vert_Pos.z*Vert_Pos.z);
+
+	float FogAlpha=1.;
+
+	if(FogDist>100.){FogAlpha=1.-(FogDist-100.)/100.;}
+	else if(FogDist>200.){FogAlpha=0.;}
+
+	nCol.a*=FogAlpha;
+
+	gl_FrontColor = nCol;
+	gl_TexCoord[0] = gl_MultiTexCoord0;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<root>
+	<lua test.txt="" />
+	<screen text.png="">
+		<gui buttons.png="" mouse_click.wav="">
+			<screen screen_background.bmp="" splash.bmp="" />
+		</gui>
+		<menus menu_test.xml="" />
+	</screen>
+</root>

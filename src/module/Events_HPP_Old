@@ -1,0 +1,135 @@
+#include <queue>
+#include <string>
+
+#include "../Core.hpp"
+#include "../os/Threader.hpp"
+#include "Thread.hpp"
+
+#include "Event_Defs.hpp"
+
+namespace SE_Events
+{
+	// Event types are deprecated; use Module IDs
+/* 	namespace Event_Types
+	{enum {
+		TYPE_UNKNOWN = 0,
+		TYPE_ENGINE,
+		TYPE_APP,
+		TYPE_MENU,
+		TYPE_GAME,
+		TYPE_THREAD_DRAW,
+		TYPE_THREAD_LOGIC,
+		TYPE_THREAD_NETOWRK,// for client to send messages
+		TYPE_WIN32,// convert
+		TYPE_OPENGL,// convert
+		TYPE_BASS
+	};}
+*/
+
+	struct Event_Base
+	{
+		Event_Base( SE_Module_ID nType, u_short ID );
+
+		virtual Event_Base* Clone();
+		std::string Thread_Created_By_Str;
+		E_Threads::Thread_ID_Type Thread_Created_By, Thread_For;
+		
+		SE_Module_ID Type;
+		ushort Code;//code id of event
+	};
+
+	template< class T >
+	struct Event_Var:public Event_Base
+	{
+		Event_Var( SE_Module_ID nType, u_short ID, T Arg ) : SE_Event_Base( nType, ID )
+		{
+			this->Argument = Arg;
+		}
+
+		Event_Base* Clone()
+		{
+			Event_Var<T>* nEv = new Event_Var<T>( this->Type, this->Code, this->Argument );
+			return nEv;
+		}
+		//std::string To_String();
+		T Argument;
+	};
+	template< class T >
+	struct Event_Var2:public Event_Base
+	{
+		Event_Base* Clone()
+		{
+			Event_Var2<T>* nEv = new Event_Var2<T>;
+			*nEv = *this;
+			return nEv;
+		}
+		//std::string To_String();
+		T Argument_1, Argument_2;
+	};
+
+	typedef Event_Var<uchar> Event_Default;
+
+	typedef Event_Var<uchar> Event_ub;
+	typedef Event_Var<ushort> Event_ushort;
+	typedef Event_Var<uint> Event_uint;
+	typedef Event_Var<float> Event_f;
+	typedef Event_Var<std::string> Event_Str;
+
+	typedef Event_Var2<uchar> Event_ub2;
+	typedef Event_Var2<ushort> Event_ushort2;
+	typedef Event_Var2<uint> Event_uint2;
+	typedef Event_Var2<float> Event_f2;
+
+
+#ifdef _WIN32
+	struct Event_Win32:public Event_Base
+	{
+		Event_Win32();
+		Event_Win32(uint Msg, WPARAM wParam, LPARAM lParam);
+		std::string To_String();
+
+		Event_Base* Clone();
+
+		uint m_Msg;
+		WPARAM m_wParam;
+		LPARAM m_lParam;
+	};
+#endif
+
+	struct Event_Sub_Manager// for each thread
+	{
+		Event_Sub_Manager();
+		~Event_Sub_Manager();
+
+		void Cleanup();
+
+		void Update();
+		void Add_Event( Event_Base* Event );
+		void (*Processer)( Event_Base* Event );
+
+
+	private:
+		void Pop_Event();
+
+		SE_Thread::Mutex m_Mutex;
+		std::queue<Event_Base*> Event_List;
+	};
+
+	struct Event_Manager
+	{
+		Event_Manager();
+		~Event_Manager();
+
+		void Cleanup();
+
+		Event_Sub_Manager Logic_Thread;
+		Event_Sub_Manager Draw_Thread;
+		Event_Sub_Manager Engine_Thread;
+
+		void Add_Event( Event_Base* Event, std::string From );
+	};
+
+	E_Threads::Thread_ID_Type Event_To_Thread( ushort ID );// default event thread for, prevent errors
+
+	}
+}

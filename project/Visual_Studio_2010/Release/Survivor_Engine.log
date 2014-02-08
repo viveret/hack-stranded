@@ -1,0 +1,97 @@
+﻿Build started 11/10/2013 10:52:28 AM.
+     1>Project "F:\Programming\Stranded\project\Visual_Studio_2010\Survivor_Engine.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Release\Survivor_Engine.unsuccessfulbuild".
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Programming\Stranded\project\Visual_Studio_2010\Release\Survivor_Engine.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\Survivor_Engine.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\Programming\Stranded\project\Visual_Studio_2010\Release\Survivor_Engine.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Programming\Stranded\project\Visual_Studio_2010\Release\Survivor_Engine.lib" /MACHINE:X86 Release\App.obj
+         Release\App_Win32.obj
+         Release\File_Stream.obj
+         Release\Interactive_Text.obj
+         Release\Window.obj
+         Release\XBox.obj
+         Release\Content.obj
+         Release\File_Types.obj
+         Release\Manager.obj
+         Release\Resources.obj
+         Release\VFS.obj
+         Release\Debug.obj
+         Release\Exception.obj
+         Release\Log.obj
+         Release\Memory.obj
+         Release\Console.obj
+         Release\Engine.obj
+         Release\Engine_Draw.obj
+         Release\Filesystem.obj
+         Release\File_Stats.obj
+         Release\Dialogue.obj
+         Release\Game.obj
+         Release\Game_Update.obj
+         Release\Map.obj
+         Release\Map_2D_Tile.obj
+         Release\Map_Height.obj
+         Release\OpenGL.obj
+         Release\se_gl.obj
+         Release\Shader.obj
+         Release\Ver_110.obj
+         Release\Ver_300.obj
+         Release\Button.obj
+         Release\GUI.obj
+         Release\Message_Log.obj
+         Release\main.obj
+         Release\Math.obj
+         Release\Menu.obj
+         Release\Menu_Base.obj
+         Release\Menu_Buttons.obj
+         Release\Menu_Internals.obj
+         Release\Menu_Load.obj
+         Release\Events.obj
+         Release\Module.obj
+         Release\Thread.obj
+         Release\Client.obj
+         Release\Host.obj
+         Release\Net.obj
+         Release\Socket.obj
+         Release\Bass.obj
+         Release\File.obj
+         Release\Input.obj
+         Release\Input_Codes.obj
+         Release\Threader.obj
+         Release\MainWinProc.obj
+         Release\Object.obj
+         Release\Object_Effects.obj
+         Release\Physics.obj
+         Release\pugixml.obj
+         Release\Font.obj
+         Release\Material.obj
+         Release\Mesh.obj
+         Release\Mesh_Load.obj
+         Release\Mesh_SMDL.obj
+         Release\Mesh_VBO.obj
+         Release\Particle_System.obj
+         Release\Texture.obj
+         Release\Core.obj
+         Release\Core_Funcs.obj
+         Release\Core_Types.obj
+         Release\File_Sys.obj
+         Release\Math.obj
+         Release\Survivor_Script.obj
+         Release\Stranded_Core.obj
+         Release\User_Space.obj
+         Release\Cipher.obj
+         Release\Draw_Utility.obj
+         Release\Functions.obj
+         Release\Lua.obj
+         Release\Math.obj
+         Release\MD5.obj
+         Release\Timer.obj
+         Release\Utility.obj
+     1>Release\Math.obj : warning LNK4042: object specified more than once; extras ignored
+     1>Release\Math.obj : warning LNK4042: object specified more than once; extras ignored
+     1>LINK : fatal error LNK1104: cannot open file 'libboost_thread-vc100-mt-s-1_54.lib'
+     1>Done Building Project "F:\Programming\Stranded\project\Visual_Studio_2010\Survivor_Engine.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:06.25

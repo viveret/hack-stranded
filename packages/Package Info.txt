@@ -1,0 +1,8 @@
+Each package is to be in 'packages/'
+
+The name for the configuration script is se.*
+Where:
+	.cms = Content mod script
+	.xml = XML Database
+
+If none is found, the package is probed for valid resources.

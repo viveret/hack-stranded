@@ -1,0 +1,5 @@
+## This content script is ran from the CWD (ie ../)
+
+inside 'packages'
+	include 'Survivor.zip'
+leave
