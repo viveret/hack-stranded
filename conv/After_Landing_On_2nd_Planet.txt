@@ -1,7 +1,0 @@
-*Radio Crackle*
-1: HQ to Mother Bird. Do you copy?
-0: This is Mother Bird Go ahead.
-1: You currently are at the planet Rexon 448. The world you were previously on was the planet Ferion 72x1. Both planets are part of the solar system Radex 99. You are approximately 2-3 solar systems away from our solar system. What caused the ship to crash?
-0: The jump drives malfunctioned and caused our course to change and so we crashed onto Ferion. Sadly Rick didn’t survive the crash. The ship was badly damaged but luckily Rex was in tack and operational or else I don’t know what I would have done.
-1: I see Mother Bird. We here at HQ are sorry for the loss of Captain Rick Steele. We know he was your friend.
-0: Thanks HQ, means a lot.

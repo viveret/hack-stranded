@@ -1,4 +1,0 @@
-0: Shoot. The ship is damaged in both the hull and the fuel tank. 
-0: I’m going to need to find the fuel tanks and fuel drums. I think I’ll get Rex to help out with that.
-0: Rex, go find fuel and bring it back to the ship while I search for repair kits.
-6: Roger.. *Robot Noises*

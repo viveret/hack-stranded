@@ -1,4 +1,0 @@
-Survivor Engine
-===============
-
-The engine used by Survivor Game. I plan for it to be a multi-platform and multi-purpose. 3D and 2D, physics engine, renderer types (OpenGL, DirectX), very programmer and end-user friendly. Supports DLC / content, mods, and updates. Also includes multiplayer, scripting languages, in-game editors, and a wide range of utilities.

@@ -1,9 +1,0 @@
-MODULES := \
-	Survivor_Script \
-	main \
-	\
-	ss_lib/Core \
-	ss_lib/Core_Funcs \
-	ss_lib/Core_Types \
-	ss_lib/File_Sys \
-	ss_lib/Math

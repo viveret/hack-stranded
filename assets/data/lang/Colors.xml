@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<lang lang="english" name="S_Engine">
+	<word name="blue">
+		<color r="0" g="0" b="1" a="1"/>
+	</word>
+	<word name="gold">
+		<color r="1" g="1" b="0" a="1"/>
+	</word>
+	<word name="badass">
+		<rank show="Bad-Ass" color="blue"/>
+	</word>
+</lang>

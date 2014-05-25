@@ -1,38 +1,50 @@
-PROGRAM = Survivor_Engine
+export SEMOD
 
-# Compiler
-CXX := g++
+SE_SO = plugins/libStranded$(SEMOD)-ubuntu.so
+CXX = g++ -D_UBUNTU
 
-# Compiler options during compilation
-CXXFLAGS := -c -O0 -g3 -std=c++11
-NOTIF_FLAGS := -Wall -Wextra -MMD -MP -Wno-comment
+SRC=$(shell find src/$(SEMOD) -name "*.cpp")
+OBJS=$(patsubst %.cpp, %.o, $(SRC))
+DEPS=$(patsubst %.o, %.d, $(OBJS))
 
-# Libraries for linking
-LIBS := -lX11 -lboost_system -lboost_thread -lGL -lGLU -lGLEW -lIL -lILU -lILUT -lfreetype -lassimp -lbass -lBulletDynamics -lBulletCollision -lLinearMath -lnoise -llua5.2 -lz -lzip
+SE_CXX_FLAGS_MOD =
+SE_MOD_LIBS =
+SE_MOD_FLAGS =
+include src/$(SEMOD)/Makefile
 
-MODULES = # For all the file names
-# Include all other makefiles
-include src/Makefile
-# Source files to add
-SOURCES = $(MODULES:%=src/%.cpp) 
-# Objects to add
-OBJECTS = $(MODULES:%=obj/%.o) 
+all: ubuntu
 
-all: build/Survivor_Engine
+#ubuntu: SE_SO = $(SEMOD)/libse$(SEMOD)-ubuntu.so
+ubuntu: $(SE_SO)
+	
 
-build/Survivor_Engine: $(OBJECTS)
-	$(CXX) $(NOTIF_FLAGS) $(OBJECTS) $(LIBS) -o $@
+android: plugins/libStranded$(SEMOD)-android.so
 
-#$(OBJECTS): $(SOURCES)
-obj/%.o: src/%.cpp
-	$(CXX) $(NOTIF_FLAGS) $(CXXFLAGS) $< -o $@
+plugins/libStranded$(SEMOD)-android.so:
+	~/bin/android-ndk-r9c/ndk-build SEMOD=$(SEMOD) NDK_DEBUG=1 --jobs -C android 
+	mv android/libs/armeabi-v7a/*.so plugins/
+	
+
+$(SE_SO): SE_INC_DIR := -Isrc/$(SEMOD) -I../Survivor_Universe/Survivor_Engine/project/include -Isrc -I/usr/include/freetype2
+$(SE_SO): SE_CXX_FLAGS := -c -O0 -g3 -std=c++11 -rdynamic -fPIC -shared -DSE_PHYSICS_2D
+$(SE_SO): SE_NOTIF_FLAGS := -Wall -Wextra -MMD -MP -Wno-comment
+$(SE_SO): SE_BUILD
+
+
+SE_BUILD: $(OBJS)
+	@mkdir -p $(dir $@)
+	$(CXX) $(SE_NOTIF_FLAGS) -shared $(OBJS) $(LIBS) $(SE_MOD_LIBS) -o $(SE_SO)
+
+%.o: %.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) $(SE_NOTIF_FLAGS) $(SE_INC_DIR) $(SE_CXX_FLAGS) $(SE_CXX_FLAGS_MOD) $(SE_MOD_FLAGS) $< -o $@
 	@echo ' '
 
-obj/%.o: src/%.c
-	$(CXX) $(NOTIF_FLAGS) $(CXXFLAGS) $< -o $@
+%.o: %.c
+	@mkdir -p $(dir $@)
+	$(CXX) $(SE_NOTIF_FLAGS) $(SE_INC_DIR) $(SE_CXX_FLAGS) $(SE_CXX_FLAGS_MOD) $(SE_MOD_FLAGS) $< -o $@
 	@echo ' '
 
 clean:
-	@find obj/ -name \*.o -delete
-	@find obj/ -name \*.d -delete
-
+	rm -f $(OBJS)
+	rm -f $(DEPS)
