@@ -1,6 +1,9 @@
 Stranded
 ========
 
+Video: http://youtu.be/0d3VfFYI2UE
+
+
 A game where you must use physics to escape impending doom
 Now using lua for maps!
 

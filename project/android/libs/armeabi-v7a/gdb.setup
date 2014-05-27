@@ -1,2 +1,0 @@
-set solib-search-path ./obj/local/armeabi-v7a
-directory /home/viveret/bin/android-ndk-r9c/platforms/android-19/arch-arm/usr/include SE_Root/project/include/SE /home/viveret/bin/android-ndk-r9c/sources/android/native_app_glue /home/viveret/bin/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include /home/viveret/bin/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/libs/armeabi-v7a/include /home/viveret/bin/android-ndk-r9c/sources/cxx-stl/gnu-libstdc++/4.6/include/backward jni

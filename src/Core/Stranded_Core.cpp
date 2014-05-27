@@ -158,7 +158,7 @@ uint Stranded_Lib::Initialize( const std::vector<std::string>& mArgs )
 	SE_Physics->Set_Gravity( Vector2f(0, 0), .125f );
 	SE_Physics->Set_World_Scale( Vector2f( 32, 32 ) );
 
-	Player_Obj = SE_Physics->Body->Gen_Body( Vector2f(0,0), Vector2f( 0.5f,1 ), 50, SE_Physics_Lib::SHAPE_RECT );
+	Player_Obj = SE_Physics->Body->Gen_Body( Vector2f(0,0), Vector2f( 0.5f,1 ), SE_Gravity::Mid_Mid, 50, SE_Physics_Lib::SHAPE_RECT );
 //	seLog->Printf( "Stranded", "Ship mass: %f\n", *SE_Physics->Body->Inv_Mass( Player_Obj ) );
 
 	Dialogue.Dialogue_Speed = 0.1f;
@@ -740,7 +740,7 @@ void Stranded_Lib::Escaped_Solar_System() // Next time!
 
 void Stranded_Lib::Register_Gravnode( Grav_Node* nNode )
 {
-	nNode->m_Obj = SE_Physics->Body->Gen_Body( nNode->Orbit_Origin, Vector2f( nNode->Radius,nNode->Radius ), 0, SE_Physics_Lib::SHAPE_ELIPSE );
+	nNode->m_Obj = SE_Physics->Body->Gen_Body( nNode->Orbit_Origin, Vector2f( nNode->Radius,nNode->Radius ), SE_Gravity::Mid_Mid, 0, SE_Physics_Lib::SHAPE_ELIPSE );
 	nNode->m_Force = SE_Physics->Force_Point_Add( nNode->Orbit_Origin, 1024, nNode->Mass * nNode->Radius * nNode->Radius * .25f );
 
 	if( nNode->Name == "sun" )
