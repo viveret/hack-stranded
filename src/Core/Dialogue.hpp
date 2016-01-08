@@ -5,6 +5,7 @@
 #include <SE/module/Thread.hpp>
 #include <string>
 #include <vector>
+#include <mutex>
 
 namespace SE_Game_Dialogue
 {
@@ -31,7 +32,7 @@ namespace SE_Game_Dialogue
 		void Next_Dialogue();
 		void End_Dialogue();
 
-		SE_Thread::Mutex Dialogue_Mutex;
+		std::recursive_mutex Dialogue_Mutex;
 		Dialogue_Full Cur_Dialogue;
 
 		float Dialogue_Speed;

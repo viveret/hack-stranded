@@ -20,19 +20,19 @@ SE_GUI_Lib::Widget_Container* Stranded_Lib::User_Load_Menu( std::string Which )
 		SE_GUI_Lib::Widget_Container* nMenu = (SE_GUI_Lib::Widget_Container*) SE_GUI->Generate_Widget( "menu", NULL );
 
 		nMenu->Label_Text = "Stranded";
-		nMenu->Label_Color.Set( 0.2, 0.4, 1 );
+		nMenu->Label_Color.set( 0.2, 0.4, 1 );
 
 		Widget_Menu_Button* nButton = (Widget_Menu_Button*)SE_GUI->Generate_Widget( "menu_button", nMenu );
 		nButton->Label_Text = "Singleplayer"; nButton->Goto = "singleplayer";
-		nButton->Position.Set( -106, -100 );
-		nButton->Size.Set( 16, 16 );
-		nButton->Label_Color.Set( 0.2, 0.4, 1 );
+		nButton->Position.set( -106, -100 );
+		nButton->Size.set( 16, 16 );
+		nButton->Label_Color.set( 0.2, 0.4, 1 );
 
 		nButton = (Widget_Menu_Button*)SE_GUI->Generate_Widget( "menu_button", nMenu );
 		nButton->Label_Text = "Quit"; nButton->Goto = "quit";
-		nButton->Position.Set( -106, 92 );
-		nButton->Size.Set( 16, 16 );
-		nButton->Label_Color.Set( 0.2, 0.4, 1 );
+		nButton->Position.set( -106, 92 );
+		nButton->Size.set( 16, 16 );
+		nButton->Label_Color.set( 0.2, 0.4, 1 );
 
 		return nMenu;
 	}

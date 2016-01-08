@@ -1,0 +1,71 @@
+Init filesys succeeded
+[Plugin]	Loading plugin window... [Plugin] 'lua' does not exist
+[Plugin]	Init window succeeded
+[Plugin]	Init segl succeeded
+[Plugin]	Loading plugin gui... Loading plugin font... Init font succeeded
+[Plugin]	[Plugin] 'lua' does not exist
+[Plugin]	Init gui succeeded
+[Plugin]	[Plugin] 'physics-2D' does not exist
+[Plugin]	[Plugin] 'lua' does not exist
+[Plugin]	[Plugin] 'physics-2D' does not exist
+[Plugin]	[Plugin] 'lua' does not exist
+[Plugin]	Init stranded-core FAILED, ret=1 (prog=1, lvl=1)
+[Plugin]	[Plugin] 'stranded-core' does not exist
+[Plugin]	[Plugin]	Done.
+[Engine]	Survivor Engine (By Viveret S.): ubuntu Pre-Alpha, Jul 21 2014, 11:28:40
+[Engine]	Start time: Thu Jul 24 11:12:55 2014
+[Engine]	Initializing Survivor Engine...
+[Event]		New tag 'NULL' : 0
+[Event]		New tag 'shutdown' : 1
+[Filesys]	Tokens:
+[Window]	Visual 0x20 Selected
+[Window]	Created window, x: 0, y: 0, w: 640, h: 480
+[Input]		Bound backspace to quit-esc: 0x476ab4, ()
+[Input]		Bound return to type-submit-enter: 0x476af3, ()
+[Event]		New tag 'input' : 2
+[Event]		New tag 'menu/load' : 3
+[GUI]		Registering 'container' (2579183347943419777)...
+[GUI]		Registering 'menu' (2579183347943419777)...
+[GUI]		Registering 'menu_button' (10333244642160484708)...
+[GUI]		Registering 'attach_c_string' (4164970128836861941)...
+[GUI]		Registering 'dialogue' (5987450666184578348)...
+[Engine]	Initialized all modules
+[Engine]	Initializing threads...
+[Thread]	Started 'update-thread'
+[Thread]	Waiting to be initialized...
+[Thread]	Started 'render-thread'
+[Thread]	Waiting to be initialized...
+[Engine]	Initializing update thread...
+[Thread]	init 'update-thread'
+[Thread]	init success 'update-thread'
+[Thread]	Initialized, waiting to be continued...
+[Engine]	Initialized update thread, initializing render thread...
+[Thread]	init 'render-thread'
+[SEGL]		Original GL Intface Ver 300, GLSL 130
+[SEGL]		Set GL Intface Ver 300, GLSL 130
+[SEGL]		Setting other...
+[SEGL]		OpenGL Version: 3.0 Mesa 10.1.3
+[SEGL]		GLSL Version: 1.30
+[SEGL]		OpenGL Vendor: Intel Open Source Technology Center
+[SEGL]		OpenGL Renderer: Mesa DRI Intel(R) Ivybridge Mobile 
+[SEGL]		GLEW Version: 1.10.0
+[SEGL]		Successfully loaded shader ./data/shaders/glsl 130/default
+[SEGL]		Successfully loaded shader ./data/shaders/mesh
+[SEGL]		Vert Shader Failed To Compile:
+[SEGL]		0:1(10): error: GLSL 1.40 is not supported. Supported versions are: 1.10, 1.20, 1.30, 1.00 ES, and 3.00 ES
+
+[SEGL]		Loading image 'fonts/bitmap.png'...
+[Filesys]	Successfully opened file './assets/fonts/bitmap.png"
+[SEGL]		Loading image 'ui/buttons.png'...
+[Filesys]	Successfully opened file './assets/ui/buttons.png"
+[SEGL]		Loading image 'ui/background.png'...
+[Filesys]	Successfully opened file './assets/ui/background.png"
+[Thread]	init success 'render-thread'
+[Thread]	Initialized, waiting to be continued...
+[Engine]	Initialized render thread...
+[Engine]	Initialized Threads: r=4, u=4
+[Engine]	Finished intializing, time: 0.157658 seconds
+
+[SEGL]		New tex 'bitmap.png': 1
+[SEGL]		New tex 'buttons.png': 2
+[SEGL]		New tex 'background.png': 3

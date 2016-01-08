@@ -2,15 +2,13 @@
 using namespace SE_Game_Dialogue;
 
 #include <SE/module/Module.hpp>
-#include <SE/filesys/Filesystem.hpp>
-#include <SE/debug/Logger.hpp>
+#include <SE/Filesys/Filesystem.hpp>
+#include <SE/Logger/Logger.hpp>
 
 namespace SE_Game_Dialogue
 {
-	SE_Module_ID m_Mod;
-
-	uint Initialize( const std::vector<std::string>& mArgs );
-	uint Cleanup();
+	void Initialize();
+	void Cleanup();
 }using namespace SE_Game_Dialogue;
 
 namespace Stranded_Lib
@@ -37,8 +35,8 @@ void Dialogue_Manager::Update( dt_precision dt )
 	if( this->Cur_Dialogue.size() == 0 )
 		return;
 	
-	this->Dialogue_Mutex.Wait_For_Lock( ); // __FUNCTION__ );
-	this->Dialogue_Mutex.Lock();
+//	this->Dialogue_Mutex.Wait_For_Lock( ); // __FUNCTION__ );
+	this->Dialogue_Mutex.lock();
 
 	if( this->Done_Scrolling == false )
 	{
@@ -56,15 +54,15 @@ void Dialogue_Manager::Update( dt_precision dt )
 		}
 	}
 
-	this->Dialogue_Mutex.Unlock();
+	this->Dialogue_Mutex.unlock();
 }
 
 std::string Dialogue_Manager::Get_Drawn_Text()
 {		
 	if( this->Cur_Dialogue.size() > 0 )
 	{					
-		this->Dialogue_Mutex.Wait_For_Lock( ); // __FUNCTION__ );
-		this->Dialogue_Mutex.Lock();
+//		this->Dialogue_Mutex.Wait_For_Lock( ); // __FUNCTION__ );
+		this->Dialogue_Mutex.lock();
 
 
 		std::string Text_Amount_Draw;
@@ -73,7 +71,7 @@ std::string Dialogue_Manager::Get_Drawn_Text()
 		Text_Amount_Draw = this->Cur_Dialogue[0].Text.substr( 0, Text_Amount );
 								  
 
-		this->Dialogue_Mutex.Unlock();
+		this->Dialogue_Mutex.unlock();
 		return Text_Amount_Draw;
 	}
 
@@ -85,11 +83,11 @@ void Dialogue_Manager::Next_Dialogue()
 {
 	if( this->Cur_Dialogue.size() > 0 )
 	{
-		this->Dialogue_Mutex.Wait_For_Lock( ); // __FUNCTION__ );
-		this->Dialogue_Mutex.Lock();
+//		this->Dialogue_Mutex.Wait_For_Lock( ); // __FUNCTION__ );
+		this->Dialogue_Mutex.lock();
 
 		this->Cur_Dialogue.erase( this->Cur_Dialogue.begin() );
-		this->Dialogue_Mutex.Unlock();
+		this->Dialogue_Mutex.unlock();
 
 		if( this->Cur_Dialogue.size() == 0 )// done with conv
 			this->In_Dialogue = false;
@@ -103,11 +101,11 @@ void Dialogue_Manager::End_Dialogue()
 {
 	if( this->Cur_Dialogue.size() > 0 )
 	{
-		this->Dialogue_Mutex.Wait_For_Lock( ); // __FUNCTION__ );
-		this->Dialogue_Mutex.Lock();
+//		this->Dialogue_Mutex.Wait_For_Lock( ); // __FUNCTION__ );
+		this->Dialogue_Mutex.lock();
 
 		this->Cur_Dialogue.clear();
-		this->Dialogue_Mutex.Unlock();
+		this->Dialogue_Mutex.unlock();
 
 		this->In_Dialogue = false;
 	}
@@ -149,7 +147,7 @@ void SE_Game_Dialogue::Dialogue_File( Dialogue_Full* Ret, const std::string& Nam
 
 	if( Data.Size() == 0 )
 	{
-		seLog->Printf( "Dialogue", "$(e)Cannot Make Conv W/ Data\n" );
+		seLog->Printf( "Dialogue", SELOG_ERROR, "$(e)Cannot Make Conv W/ Data\n" );
 		return;
 	}
 
@@ -189,23 +187,23 @@ void SE_Game_Dialogue::Dialogue_File( Dialogue_Full* Ret, const std::string& Nam
 
 	Data.Delete();	
 
-	seLog->Printf( "Dialogue", "$(d)Successfully loaded dialogue (%d)\n",
+	seLog->Printf( "Dialogue", SELOG_DEBUG - 10, "$(d)Successfully loaded dialogue (%d)\n",
 			Ret->size() );
 }
 
-uint SE_Game_Dialogue::Initialize( const std::vector<std::string>& mArgs )
+void SE_Game_Dialogue::Initialize()
 {
-	return SE_SUCCESS;
+	//return SE_SUCCESS;
 }
 
-uint SE_Game_Dialogue::Cleanup()
+void SE_Game_Dialogue::Cleanup()
 {
-	return SE_SUCCESS;
+	//return SE_SUCCESS;
 }
 
 
 void SE_Game_Dialogue::Register_Module()
 {
-	m_Mod = S_Engine::Generate_Module( "stranded" );
-	S_Engine::Register_Module_Engine( m_Mod, S_Engine::Reg_Mod_Time::MED_LEVEL + 60, Initialize, Cleanup );
+//	m_Mod = S_Engine::Generate_Module( "stranded" );
+	S_Engine::Register_Module_Engine( S_Engine::Reg_Mod_Time::MED_LEVEL + 60, Initialize, Cleanup );
 }

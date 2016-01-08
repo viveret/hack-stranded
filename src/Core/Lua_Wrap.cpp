@@ -1,5 +1,5 @@
 #include "Stranded_Core.hpp"
-#include <SE/debug/Logger.hpp>
+#include <SE/Logger/Logger.hpp>
 
 namespace Stranded_Lib
 {
@@ -32,7 +32,7 @@ namespace Stranded_Lib
 	extern SE_Physics_Lib::Body_ID Player_Obj;
 	extern std::string Solar_System_Next, Solar_System_Current;
 	extern float Solar_System_Radius_Sqrd;
-	extern m_Dialogue_Man Dialogue;
+//	extern m_Dialogue_Man Dialogue;
 	extern std::vector< Trigger_Spot > Triggers;
 }
 using namespace Stranded_Lib;
@@ -114,7 +114,7 @@ int Stranded_Lib::Wrap_Gen_Planet( lua_State* L )
 
 lError:
 
-	seLog->Printf( "Stranded-Lua", "$(w)at %s - gen_planet( string, type, x, y, r, speed, mass, [Parent] )\n", Err.c_str() );
+	seLog->Printf( "Stranded-Lua", SELOG_ALERT, "$(w)at %s - gen_planet( string, type, x, y, r, speed, mass, [Parent] )\n", Err.c_str() );
 	delete This;
 	return 0;
 }
@@ -129,7 +129,7 @@ int Stranded_Lib::Wrap_Solarsys_Next( lua_State* L )
 	if( lua_isstring(L, -1) )
 		Solar_System_Next = lua_tostring(L, -1);
 	else
-		seLog->Printf( "Stranded-Lua", "$(w)next_solarsys( string )\n" );
+		seLog->Printf( "Stranded-Lua", SELOG_ALERT, "$(w)next_solarsys( string )\n" );
 
 	return 0;
 }
@@ -142,7 +142,7 @@ int Stranded_Lib::Wrap_Solarsys_Radius( lua_State* L )
 		Solar_System_Radius_Sqrd *= Solar_System_Radius_Sqrd;
 	}
 	else
-		seLog->Printf( "Stranded-Lua", "$(w)solarsys_radius( number )\n" );
+		seLog->Printf( "Stranded-Lua", SELOG_ALERT, "$(w)solarsys_radius( number )\n" );
 
 	return 0;
 
@@ -157,9 +157,9 @@ int Stranded_Lib::Wrap_Solarsys_Clear( lua_State* L )
 int Stranded_Lib::Wrap_Conv_Load( lua_State* L )
 {
 	if( lua_isstring(L, -1) )
-		Dialogue.Load( std::string("conv/") + lua_tostring(L, -1) + ".txt" );
+		;//Dialogue.Load( std::string("conv/") + lua_tostring(L, -1) + ".txt" );
 	else
-		seLog->Printf( "Stranded-Lua", "$(w)load_conv( string )\n" );
+		seLog->Printf( "Stranded-Lua", SELOG_ALERT, "$(w)load_conv( string )\n" );
 
 	return 0;
 }
@@ -197,7 +197,7 @@ int Stranded_Lib::Wrap_Gen_Trigger( lua_State* L )
 
 lError:
 
-	seLog->Printf( "Stranded-Lua", "gen_trigger( x, y, r, string )\n" );
+	seLog->Printf( "Stranded-Lua", SELOG_ALERT, "gen_trigger( x, y, r, string )\n" );
 	return 0;
 }
 

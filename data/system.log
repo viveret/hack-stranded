@@ -1,0 +1,316 @@
+Linux version 3.13.0-32-generic (buildd@kissel) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #57-Ubuntu SMP Tue Jul 15 03:51:08 UTC 2014
+nr_free_pages 418564
+nr_alloc_batch 3156
+nr_inactive_anon 152527
+nr_active_anon 256469
+nr_inactive_file 56874
+nr_active_file 37459
+nr_unevictable 8
+nr_mlock 8
+nr_anon_pages 323545
+nr_mapped 46539
+nr_file_pages 215073
+nr_dirty 17
+nr_writeback 0
+nr_slab_reclaimable 8335
+nr_slab_unreclaimable 8048
+nr_page_table_pages 7484
+nr_kernel_stack 518
+nr_unstable 0
+nr_bounce 0
+nr_vmscan_write 576929
+nr_vmscan_immediate_reclaim 2368
+nr_writeback_temp 0
+nr_isolated_anon 0
+nr_isolated_file 0
+nr_shmem 67905
+nr_dirtied 1999771
+nr_written 2553319
+numa_hit 55739325
+numa_miss 0
+numa_foreign 0
+numa_interleave 16248
+numa_local 55739325
+numa_other 0
+nr_anon_transparent_hugepages 42
+nr_free_cma 0
+nr_dirty_threshold 290031
+nr_dirty_background_threshold 193354
+pgpgin 9656321
+pgpgout 11924248
+pswpin 475116
+pswpout 576929
+pgalloc_dma 6662
+pgalloc_dma32 53257675
+pgalloc_normal 8490535
+pgalloc_movable 0
+pgfree 63341633
+pgactivate 1627369
+pgdeactivate 1767192
+pgfault 75328549
+pgmajfault 96089
+pgrefill_dma 597
+pgrefill_dma32 1520809
+pgrefill_normal 251213
+pgrefill_movable 0
+pgsteal_kswapd_dma 157
+pgsteal_kswapd_dma32 1817342
+pgsteal_kswapd_normal 237923
+pgsteal_kswapd_movable 0
+pgsteal_direct_dma 427
+pgsteal_direct_dma32 1631631
+pgsteal_direct_normal 247642
+pgsteal_direct_movable 0
+pgscan_kswapd_dma 157
+pgscan_kswapd_dma32 2450147
+pgscan_kswapd_normal 332487
+pgscan_kswapd_movable 0
+pgscan_direct_dma 729
+pgscan_direct_dma32 2889290
+pgscan_direct_normal 437478
+pgscan_direct_movable 0
+pgscan_direct_throttle 0
+zone_reclaim_failed 0
+pginodesteal 21107
+slabs_scanned 719616
+kswapd_inodesteal 434
+kswapd_low_wmark_hit_quickly 4
+kswapd_high_wmark_hit_quickly 134
+pageoutrun 237
+allocstall 4683
+pgrotated 579233
+numa_pte_updates 0
+numa_huge_pte_updates 0
+numa_hint_faults 0
+numa_hint_faults_local 0
+numa_pages_migrated 0
+pgmigrate_success 326159
+pgmigrate_fail 301
+compact_migrate_scanned 1755511
+compact_free_scanned 15760942
+compact_isolated 1586904
+compact_stall 781
+compact_fail 408
+compact_success 373
+htlb_buddy_alloc_success 0
+htlb_buddy_alloc_fail 0
+unevictable_pgs_culled 1
+unevictable_pgs_scanned 0
+unevictable_pgs_rescued 40
+unevictable_pgs_mlocked 48
+unevictable_pgs_munlocked 40
+unevictable_pgs_cleared 0
+unevictable_pgs_stranded 0
+thp_fault_alloc 9116
+thp_fault_fallback 3545
+thp_collapse_alloc 796
+thp_collapse_alloc_failed 226
+thp_split 780
+thp_zero_page_alloc 7
+thp_zero_page_alloc_failed 8
+nr_tlb_remote_flush 135894
+nr_tlb_remote_flush_received 149599
+nr_tlb_local_flush_all 662211
+nr_tlb_local_flush_one 20211281
+cpu  470643 11580 285149 3359202 45609 5061 0 0 0 0
+cpu0 123915 2280 88459 2827110 31343 1341 0 0 0 0
+cpu1 108065 4070 64949 177111 5874 1331 0 0 0 0
+cpu2 122832 2673 73881 178656 2121 1125 0 0 0 0
+cpu3 115829 2557 57858 176324 6269 1263 0 0 0 0
+intr 47723421 24 138926 0 0 0 0 0 0 1 2551036 0 0 3378973 0 0 0 3039 0 0 0 0 0 0 345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 213 0 431106 24 1660632 473170 192 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ctxt 138357958
+btime 1405869378
+processes 243643
+procs_running 1
+procs_blocked 0
+softirq 9706936 1036 4026875 1592 32063 417067 42 103304 2075736 25221 3024000
+130 watchdog
+ 54 vboxnetctl
+ 55 vboxdrvu
+ 56 vboxdrv
+144 nvram
+ 57 mei
+ 58 network_throughput
+ 59 network_latency
+ 60 cpu_dma_latency
+227 mcelog
+236 device-mapper
+223 uinput
+  1 psaux
+200 tun
+237 loop-control
+228 hpet
+229 fuse
+ 61 ecryptfs
+231 snapshot
+184 microcode
+ 62 rfkill
+ 63 vga_arbiter
+0.81 0.51 0.50 1/513 19046
+MemTotal:        3861300 kB
+MemFree:         1673728 kB
+Buffers:           44468 kB
+Cached:           604484 kB
+SwapCached:       211340 kB
+Active:          1176008 kB
+Inactive:         837604 kB
+Active(anon):    1026172 kB
+Inactive(anon):   610108 kB
+Active(file):     149836 kB
+Inactive(file):   227496 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
+SwapTotal:       4194300 kB
+SwapFree:        3516976 kB
+Dirty:                68 kB
+Writeback:             0 kB
+AnonPages:       1294476 kB
+Mapped:           186376 kB
+Shmem:            271620 kB
+Slab:              65532 kB
+SReclaimable:      33340 kB
+SUnreclaim:        32192 kB
+KernelStack:        4144 kB
+PageTables:        29716 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6124948 kB
+Committed_AS:    4514128 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      348836 kB
+VmallocChunk:   34359359248 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     86016 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       86084 kB
+DirectMap2M:     3921920 kB
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                4
+On-line CPU(s) list:   0-3
+Thread(s) per core:    2
+Core(s) per socket:    2
+Socket(s):             1
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 58
+Stepping:              9
+CPU MHz:               1900.000
+BogoMIPS:              4988.51
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              3072K
+NUMA node0 CPU(s):     0-3
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i3-3120M CPU @ 2.50GHz
+stepping	: 9
+microcode	: 0x15
+cpu MHz		: 1200.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c lahf_lm arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 4988.51
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i3-3120M CPU @ 2.50GHz
+stepping	: 9
+microcode	: 0x15
+cpu MHz		: 1200.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c lahf_lm arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 4988.51
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i3-3120M CPU @ 2.50GHz
+stepping	: 9
+microcode	: 0x15
+cpu MHz		: 1200.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c lahf_lm arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 4988.51
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i3-3120M CPU @ 2.50GHz
+stepping	: 9
+microcode	: 0x15
+cpu MHz		: 1900.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c lahf_lm arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 4988.51
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+

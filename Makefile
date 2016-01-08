@@ -25,7 +25,7 @@ plugins/libStranded$(SEMOD)-android.so:
 	mv android/libs/armeabi-v7a/*.so plugins/
 	
 
-$(SE_SO): SE_INC_DIR := -Isrc/$(SEMOD) -I../Survivor_Universe/Survivor_Engine/project/include -Isrc -I/usr/include/freetype2
+$(SE_SO): SE_INC_DIR := -Isrc/$(SEMOD) -I../Survivor_Universe/Survivor_Engine/project/include -Isrc -I../Survivor_Universe/Survivor_Engine/project/include_modules
 $(SE_SO): SE_CXX_FLAGS := -c -O0 -g3 -std=c++11 -rdynamic -fPIC -shared -DSE_PHYSICS_2D
 $(SE_SO): SE_NOTIF_FLAGS := -Wall -Wextra -MMD -MP -Wno-comment
 $(SE_SO): SE_BUILD
