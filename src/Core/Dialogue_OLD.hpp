@@ -31,7 +31,7 @@ namespace SE_Game_Dialogue
 		void Next_Dialogue();
 		void End_Dialogue();
 
-		SE_Thread::Mutex Dialogue_Mutex;
+		std::recursive_timed_mutex Dialogue_Mutex;
 		Dialogue_Full Cur_Dialogue;
 
 		float Dialogue_Speed;

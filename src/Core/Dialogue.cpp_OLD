@@ -37,8 +37,7 @@ void Dialogue_Manager::Update( dt_precision dt )
 	if( this->Cur_Dialogue.size() == 0 )
 		return;
 	
-	this->Dialogue_Mutex.Wait_For_Lock( ); // __FUNCTION__ );
-	this->Dialogue_Mutex.Lock();
+	this->Dialogue_Mutex.lock();
 
 	if( this->Done_Scrolling == false )
 	{
@@ -56,15 +55,14 @@ void Dialogue_Manager::Update( dt_precision dt )
 		}
 	}
 
-	this->Dialogue_Mutex.Unlock();
+	this->Dialogue_Mutex.unlock();
 }
 
 std::string Dialogue_Manager::Get_Drawn_Text()
 {		
 	if( this->Cur_Dialogue.size() > 0 )
 	{					
-		this->Dialogue_Mutex.Wait_For_Lock( ); // __FUNCTION__ );
-		this->Dialogue_Mutex.Lock();
+		this->Dialogue_Mutex.lock();
 
 
 		std::string Text_Amount_Draw;
@@ -73,7 +71,7 @@ std::string Dialogue_Manager::Get_Drawn_Text()
 		Text_Amount_Draw = this->Cur_Dialogue[0].Text.substr( 0, Text_Amount );
 								  
 
-		this->Dialogue_Mutex.Unlock();
+		this->Dialogue_Mutex.unlock();
 		return Text_Amount_Draw;
 	}
 
@@ -85,11 +83,10 @@ void Dialogue_Manager::Next_Dialogue()
 {
 	if( this->Cur_Dialogue.size() > 0 )
 	{
-		this->Dialogue_Mutex.Wait_For_Lock( ); // __FUNCTION__ );
-		this->Dialogue_Mutex.Lock();
+		this->Dialogue_Mutex.lock();
 
 		this->Cur_Dialogue.erase( this->Cur_Dialogue.begin() );
-		this->Dialogue_Mutex.Unlock();
+		this->Dialogue_Mutex.unlock();
 
 		if( this->Cur_Dialogue.size() == 0 )// done with conv
 			this->In_Dialogue = false;
@@ -103,11 +100,10 @@ void Dialogue_Manager::End_Dialogue()
 {
 	if( this->Cur_Dialogue.size() > 0 )
 	{
-		this->Dialogue_Mutex.Wait_For_Lock( ); // __FUNCTION__ );
-		this->Dialogue_Mutex.Lock();
+		this->Dialogue_Mutex.lock();
 
 		this->Cur_Dialogue.clear();
-		this->Dialogue_Mutex.Unlock();
+		this->Dialogue_Mutex.unlock();
 
 		this->In_Dialogue = false;
 	}

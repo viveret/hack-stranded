@@ -5,7 +5,7 @@
 #include <SE/physics/Physics.hpp>
 #include <SE/utility/Lua.hpp>
 #include <SE/gui/GUI.hpp>
-#include "Dialogue.hpp"
+//#include "Dialogue.hpp"
 
 namespace Stranded_Lib
 {
@@ -20,7 +20,7 @@ namespace Stranded_Lib
 		SE_Physics_Lib::Body_ID m_Obj;
 		SE_Physics_Lib::Force_ID m_Force;
 		float Radius, Orbit_Speed, Orbit_Location, Mass;
-		Vector2f Orbit_Origin;
+		Vec2 Orbit_Origin;
 
 		uint Tex; // within player, so render
 		float Rotate;
@@ -30,16 +30,16 @@ namespace Stranded_Lib
 
 	struct Trigger_Spot
 	{
-		Vector2f Pos;
+		Vec2 Pos;
 		float Radius_Sqrd;
 		std::string Conv;
 	};
 
-	struct m_Dialogue_Man: public SE_Game_Dialogue::Dialogue_Manager
+/*	struct m_Dialogue_Man: public SE_Game_Dialogue::Dialogue_Manager
 	{
 		void Draw();
 		void Play_Tick_Noise();
-	};
+	};*/
 
 	extern luaL_Reg Stranded_Lualib[];
 

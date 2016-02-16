@@ -1,0 +1,155 @@
+[Engine]	Survivor Engine (By Viveret S.): ubuntu Pre-Alpha, Jun 16 2014, 17:17:41
+[Engine]	Start time: Mon Jun 16 17:30:06 2014
+[Engine]	Initializing Survivor Engine...
+[Filesys]	Tokens:
+[Window]	Visual 0x27 Selected
+[Window]	Created window, x: 0, y: 0, w: 640, h: 480
+[Input]		Bound backspace to quit-esc: 0x47fb3a, ()
+[Input]		Bound return to type-submit-enter: 0x47fbd4, ()
+[Lua]		Registered mod '_G'
+[Lua]			memory
+[Lua]			garbage_collect
+[Lua]			print
+[Lua]			shutdown
+[Lua]			dofile
+[Lua]		Registered mod 'window'
+[Lua]			size
+[Filesys]	Loading XML File: ./assets/data/lang/Colors.xml... Success
+[Physics]	Made Bullet Collision Config
+[Physics]	Made Bullet Dispatcher
+[Physics]	Made Bullet Broad Phase
+[Physics]	Made Bullet Solver
+[Physics]	Made Bullet Dynamic World
+[Lua]		Registered mod 'physics'
+[Lua]			g_speed
+[Lua]			enabled
+[Lua]			g_gravity
+[Lua]			position
+[GUI]		Registering 'container' (2579183347943419777)...
+[GUI]		Registering 'menu' (2579183347943419777)...
+[GUI]		Registering 'menu_button' (10333244642160484708)...
+[GUI]		Registering 'attach_c_string' (4164970128836861941)...
+[GUI]		Registering 'dialogue' (5987450666184578348)...
+[Lua]		Registered mod 'gui'
+[Lua]			gen_widget
+[Lua]			pos
+[Lua]			size
+[Lua]			gravity
+[Lua]			label
+[Lua]			label_gravity
+[Lua]			grav_id
+[Lua]			menu
+[Input]		Bound t to dialogue-t: 0x7ffff1b23263, ()
+[Input]		Bound r to reset-r: 0x7ffff1b2327a, ()
+[Lua]		Registered mod 'stranded'
+[Lua]			gen_planet
+[Lua]			load_solarsys
+[Lua]			next_solarsys
+[Lua]			solarsys_radius
+[Lua]			clear_solarsys
+[Lua]			load_conv
+[Lua]			gen_trigger
+[Lua]			get_player
+[Physics]	New body: pos=(0,0), size=(0.25,0.5), mass=50
+[Stranded]	Clearing solar system...
+[Physics]	New body: pos=(-12,0), size=(8,4), mass=0
+[Physics]	New force (-12, 0), r=1024.000000, s=24000.000000
+[Physics]	New body: pos=(12,0), size=(8,4), mass=0
+[Physics]	New force (12, 0), r=1024.000000, s=24000.000000
+[Stranded]	moon1, 12.000000, 0.000000, 8.000000, 0.000000, 1500.000000, 1500.000000
+[Engine]	Initialized all modules
+[Engine]	Initializing threads...
+[Thread]	Started 'update-thread'
+[Thread]	Waiting to be initialized...
+[Thread]	Started 'render-thread'
+[Thread]	Waiting to be initialized...
+[Engine]	Initializing update thread...
+[Thread]	init 'update-thread'
+[Thread]	init success 'update-thread'
+[Thread]	Initialized, waiting to be continued...
+[Engine]	Initialized update thread, initializing render thread...
+[Thread]	init 'render-thread'
+[SEGL]		Original GL Intface Ver 440, GLSL 440
+[SEGL]		Set GL Intface Ver 300, GLSL 430
+[SEGL]		Setting other...
+[SEGL]		OpenGL Version: 4.4.0 NVIDIA 331.38
+[SEGL]		GLSL Version: 4.40 NVIDIA via Cg compiler
+[SEGL]		OpenGL Vendor: NVIDIA Corporation
+[SEGL]		OpenGL Renderer: GeForce GT 545/PCIe/SSE2
+[SEGL]		GLEW Version: 1.10.0
+[SEGL]		Successfully loaded shader ./data/shaders/glsl 430/default
+[SEGL]		Successfully loaded shader ./data/shaders/mesh
+[SEGL]		Successfully loaded shader default
+[SEGL]		Loading image 'ui/buttons.png'...
+[Filesys]	Successfully opened file './assets/ui/buttons.png"
+[SEGL]		Loading image 'ui/background.png'...
+[Filesys]	Successfully opened file './assets/ui/background.png"
+[SEGL]		Loading image 'world/spaceship_default.png'...
+[Filesys]	Successfully opened file './assets/world/spaceship_default.png"
+[SEGL]		Loading image 'world/spaceship_fly.png'...
+[Filesys]	Successfully opened file './assets/world/spaceship_fly.png"
+[SEGL]		Loading image 'world/spaceship_crash.png'...
+[Filesys]	Successfully opened file './assets/world/spaceship_crash.png"
+[SEGL]		Loading image 'world/star.png'...
+[Filesys]	Successfully opened file './assets/world/star.png"
+[SEGL]		Loading image 'screen/Dialog_Border.png'...
+[Filesys]	Successfully opened file './assets/screen/Dialog_Border.png"
+[SEGL]		Loading image 'screen/Dialog_Arrow.png'...
+[Filesys]	Successfully opened file './assets/screen/Dialog_Arrow.png"
+[SEGL]		Loading image 'screen/Captain_Shapton_Portrait.png'...
+[Filesys]	Successfully opened file './assets/screen/Captain_Shapton_Portrait.png"
+[SEGL]		Loading image 'screen/General_Gordan_Portrait.png'...
+[Filesys]	Successfully opened file './assets/screen/General_Gordan_Portrait.png"
+[SEGL]		Loading image 'screen/General_Ranson_Portrait.png'...
+[Filesys]	Successfully opened file './assets/screen/General_Ranson_Portrait.png"
+[SEGL]		Loading image 'screen/Jacklyn_Foster_Portrait.png'...
+[Filesys]	Successfully opened file './assets/screen/Jacklyn_Foster_Portrait.png"
+[SEGL]		Loading image 'screen/static.png'...
+[Filesys]	Successfully opened file './assets/screen/static.png"
+[SEGL]		Loading image 'planets/earth.png'...
+[Filesys]	Successfully opened file './assets/planets/earth.png"
+[SEGL]		Loading image 'planets/moon.png'...
+[Filesys]	Successfully opened file './assets/planets/moon.png"
+[SEGL]		Loading image 'planets/mars.png'...
+[Filesys]	Successfully opened file './assets/planets/mars.png"
+[SEGL]		Loading image 'planets/mercury.png'...
+[Filesys]	Successfully opened file './assets/planets/mercury.png"
+[SEGL]		Loading image 'planets/sun.png'...
+[Filesys]	Successfully opened file './assets/planets/sun.png"
+[SEGL]		Loading image 'planets/ice.png'...
+[Filesys]	Successfully opened file './assets/planets/ice.png"
+[SEGL]		Loading image 'planets/candy_mnm.png'...
+[Filesys]	Successfully opened file './assets/planets/candy_mnm.png"
+[SEGL]		Loading image 'planets/candy.png'...
+[Filesys]	Successfully opened file './assets/planets/candy.png"
+[Thread]	init success 'render-thread'
+[Thread]	Initialized, waiting to be continued...
+[Engine]	Initialized render thread...
+[Engine]	Initialized Threads: r=4, u=4
+[Engine]	Finished intializing, time: 0.10716 seconds
+
+[SEGL]		Inside default render string
+[SEGL]		New tex 'buttons.png': 1
+[SEGL]		New tex 'spaceship_default.png': 3
+[SEGL]		New tex 'spaceship_fly.png': 4
+[SEGL]		New tex 'spaceship_crash.png': 5
+[SEGL]		New tex 'star.png': 6
+[SEGL]		New tex 'Dialog_Arrow.png': 8
+[SEGL]		New tex 'Captain_Shapton_Portrait.png': 9
+[SEGL]		New tex 'General_Gordan_Portrait.png': 10
+[SEGL]		New tex 'General_Ranson_Portrait.png': 11
+[SEGL]		New tex 'Jacklyn_Foster_Portrait.png': 12
+[SEGL]		New tex 'static.png': 13
+[SEGL]		New tex 'moon.png': 15
+[SEGL]		New tex 'mercury.png': 17
+[SEGL]		New tex 'background.png': 2
+[SEGL]		New tex 'Dialog_Border.png': 7
+[SEGL]		New tex 'candy.png': 21
+[SEGL]		New tex 'candy_mnm.png': 20
+[SEGL]		New tex 'mars.png': 16
+[SEGL]		New tex 'earth.png': 14
+[SEGL]		New tex 'ice.png': 19
+[SEGL]		New tex 'sun.png': 18
+[Input]		Key 0x26 changed: 0 and 0 to 1
+[Input]		Key 0x26 changed: 1 and 1 to 0
+[Input]		Key 0x24 changed: 0 and 0 to 1
