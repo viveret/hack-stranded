@@ -114,7 +114,11 @@ int Stranded_Lib::Wrap_Gen_Planet( lua_State* L )
 
 lError:
 
+<<<<<<< HEAD
 	seLog->Printf( "Stranded-Lua", SELOG_NOTICE, "$(w)at %s - gen_planet( string, type, x, y, r, speed, mass, [Parent] )\n", Err.c_str() );
+=======
+	seLog->Printf( "Stranded-Lua", SELOG_ALERT, "$(w)at %s - gen_planet( string, type, x, y, r, speed, mass, [Parent] )\n", Err.c_str() );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 	delete This;
 	return 0;
 }
@@ -129,7 +133,11 @@ int Stranded_Lib::Wrap_Solarsys_Next( lua_State* L )
 	if( lua_isstring(L, -1) )
 		Solar_System_Next = lua_tostring(L, -1);
 	else
+<<<<<<< HEAD
 		seLog->Printf( "Stranded-Lua", SELOG_NOTICE, "$(w)next_solarsys( string )\n" );
+=======
+		seLog->Printf( "Stranded-Lua", SELOG_ALERT, "$(w)next_solarsys( string )\n" );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
 	return 0;
 }
@@ -142,7 +150,11 @@ int Stranded_Lib::Wrap_Solarsys_Radius( lua_State* L )
 		Solar_System_Radius_Sqrd *= Solar_System_Radius_Sqrd;
 	}
 	else
+<<<<<<< HEAD
 		seLog->Printf( "Stranded-Lua", SELOG_NOTICE, "$(w)solarsys_radius( number )\n" );
+=======
+		seLog->Printf( "Stranded-Lua", SELOG_ALERT, "$(w)solarsys_radius( number )\n" );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
 	return 0;
 
@@ -159,7 +171,11 @@ int Stranded_Lib::Wrap_Conv_Load( lua_State* L )
 	if( lua_isstring(L, -1) )
 		;//Dialogue.Load( std::string("conv/") + lua_tostring(L, -1) + ".txt" );
 	else
+<<<<<<< HEAD
 		seLog->Printf( "Stranded-Lua", SELOG_NOTICE, "$(w)load_conv( string )\n" );
+=======
+		seLog->Printf( "Stranded-Lua", SELOG_ALERT, "$(w)load_conv( string )\n" );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
 	return 0;
 }
@@ -197,7 +213,11 @@ int Stranded_Lib::Wrap_Gen_Trigger( lua_State* L )
 
 lError:
 
+<<<<<<< HEAD
 	seLog->Printf( "Stranded-Lua", SELOG_NOTICE, "gen_trigger( x, y, r, string )\n" );
+=======
+	seLog->Printf( "Stranded-Lua", SELOG_ALERT, "gen_trigger( x, y, r, string )\n" );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 	return 0;
 }
 

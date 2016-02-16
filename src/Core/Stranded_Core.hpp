@@ -35,7 +35,11 @@ namespace Stranded_Lib
 		std::string Conv;
 	};
 
+<<<<<<< HEAD
 /*	struct m_Dialogue_Man: public SE_Game_Dialogue::Dialogue_Manager
+=======
+	/*struct m_Dialogue_Man: public SE_Game_Dialogue::Dialogue_Manager
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 	{
 		void Draw();
 		void Play_Tick_Noise();

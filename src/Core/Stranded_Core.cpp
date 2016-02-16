@@ -4,19 +4,22 @@
 #include <SE/Logger/Logger.hpp>
 #include <SE/os/Input.hpp>
 #include <SE/os/Input_Codes.hpp>
-#include <SE/module/Event_Defs.hpp>
+//#include <SE/module/Event_Defs.hpp>
 
-#include <SE/physics/Physics.hpp>
+#include <SE/Physics/Physics.hpp>
 
-#include <SE/gl/OpenGL.hpp>
-#include <SE/gl/segl.hpp>
-#include <SE/Window.hpp>
+#include <SE/SEGL/OpenGL.hpp>
+#include <SE/SEGL/segl.hpp>
+#include <SE/Window/Window.hpp>
 #include <SE/utility/Draw_Utility.hpp>
 
-#include <SE/filesys/Filesystem.hpp>
+#include <SE/Filesys/Filesystem.hpp>
 
+<<<<<<< HEAD
 using namespace seMath;
 
+=======
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 extern "C"{
 const char* seModule_Name = "stranded-core";
 const char* seModule_Ver = "";
@@ -26,8 +29,11 @@ uint seModule_Interrogate( uint Level, uint* Prog ); // like init
 void seModule_Cleanup();
 void* seModule_Interface();
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
 #define STR_CAM_TYPE_CHASE	0x00
 #define STR_CAM_TYPE_GRAV	0x01
@@ -48,7 +54,7 @@ namespace Stranded_Lib
 	void* Module_Interface( const char* );
 	uint Register_Module( const char* );
 
-	SE_Module_ID m_Mod = NULL;
+	//SE_Module_ID m_Mod = NULL;
 
 	void Thread_Update();
 	void Thread_Render();
@@ -80,7 +86,11 @@ namespace Stranded_Lib
 	SE_Physics_Lib::Body_ID Player_Obj = NULL, Plr_Ship = NULL;
 	uint Player_Tex = 0;
 
+<<<<<<< HEAD
 //	m_Dialogue_Man Dialogue;
+=======
+	//m_Dialogue_Man Dialogue;
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 	void Key_Trigger_Dialogue( sshort* Data );
 	void Key_Reset( sshort* Data );
 
@@ -144,17 +154,22 @@ void Stranded_Lib::Start_Game()
 void Stranded_Lib::Initialize()
 {
 	srand( time(NULL) );
+<<<<<<< HEAD
 //	S_Engine::Module_set_Color( "\x1b[35m" );
+=======
+//	S_Engine::Module.set_Color( "\x1b[35m" );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 	SE_Window->Set_Name( "Stranded v2 - Survivor Engine" );
 
 	SE_GUI->Set_Load_Menu( User_Load_Menu );
 	SE_GUI->Set_GUI_Background( User_GUI_Background );
-	S_Engine::Event_Add_Engine( new SE_Events::Event_Var<std::string>( S_Engine::Get_Module_Generic("gui"), Event_GUI::EVENT_MENU_LOAD, "title" ) );
+	SE_Event_Lib::ThrowTag <std::string> ( "menu/load", "title" );
 
 	SE_Input::Bind_Key( SE_Input_Codes::KEY_T, Key_Trigger_Dialogue, "dialogue-t", true );
 	SE_Input::Bind_Key( SE_Input_Codes::KEY_R, Key_Reset, "reset-r", true );
 
-	SE_Lua->Register_Module( Stranded_Lualib, "stranded" );
+	if( SE_Lua )
+		SE_Lua->Register_Module( Stranded_Lualib, "stranded" );
 
 	for( uint i = 0; i < NUM_STARS; i++ )
 	{
@@ -175,19 +190,28 @@ void Stranded_Lib::Initialize()
 	Player_Obj = SE_Physics->Body->Gen_Body( Vec2(0,0), Vec2( 0.5f,1 ), SE_Gravity::Mid_Mid, 50, SE_Physics_Lib::SHAPE_RECT );
 //	seLog->Printf( "Stranded", "Ship mass: %f\n", *SE_Physics->Body->Inv_Mass( Player_Obj ) );
 
+<<<<<<< HEAD
 //	Dialogue.Dialogue_Speed = 0.1f;
+=======
+	//Dialogue.Dialogue_Speed = 0.1f;
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
-	SE_Lua->Do_File( "assets/solar_systems/title.lua" );
+	if( SE_Lua )
+		SE_Lua->Do_File( "assets/solar_systems/title.lua" );
 
 //	SE_Raw_Buffer File_Buf = SE_Filesys->File_Load_Instant( "solar_systems/rexon_500.txt" );
 //	Create_From_Script( File_Buf.Data() );
 //	File_Buf.Delete();
 
+<<<<<<< HEAD
 
 	*(((SE_Scheduler_Interface*) SE_Mod_Plugin::Get( "scheduler", NULL ))
 		->State( seSchedule_Engine_Init(), Initialize )) = SE_Scheduler_Lib::STATE_REMOVE;
 
 	SE_Error::Set( SE_RETURN, SE_SUCCESS );
+=======
+//	return SE_SUCCESS;
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 }
 
 void Resources::Load()
@@ -221,11 +245,15 @@ void Resources::Load()
 //	SE_Physics->Obj_Tex(Player_Obj) = Resources::Ship_Fly;
 //	SE_Physics->Color(Player_Obj).set( 1, 1, 1, 1 );
 
+<<<<<<< HEAD
 
 	*(((SE_Scheduler_Interface*) SE_Mod_Plugin::Get( "scheduler", NULL ))
 		->State( seSchedule_Render_Init(), Load )) = SE_Scheduler_Lib::STATE_REMOVE;
 
 	SE_Error::Set( SE_RETURN, SE_SUCCESS );
+=======
+//	return SE_SUCCESS;
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 }
 
 void Stranded_Lib::Cleanup()
@@ -240,16 +268,20 @@ void Stranded_Lib::Thread_Update()
 
 	if( is_Playing )
 	{
+<<<<<<< HEAD
 		Vec2 Dir;
+=======
+		schar Dirx, Diry;
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 /*		if( SE_Input::Is_Down( SE_Input_Codes::KEY_D ) )
 			Dir.x() ++;
 		if( SE_Input::Is_Down( SE_Input_Codes::KEY_A ) )
 			Dir.x() --;*/
 
 		if( SE_Input::Is_Down( SE_Input_Codes::KEY_W ) )
-			Dir.y() --;
+			Diry --;
 		if( SE_Input::Is_Down( SE_Input_Codes::KEY_S ) )
-			Dir.y() ++;
+			Diry ++;
 
 		if( SE_Input::Is_Down( SE_Input_Codes::KEY_Q ) )
 		{
@@ -271,11 +303,16 @@ void Stranded_Lib::Thread_Update()
 
 
 //		seLog->Printf( "Stranded", "%f: %f, %f\n", Camera_Rot, Cos, Sin );
-		if( (Dir.x() != 0 || Dir.y() != 0) && Player_Fuel > 0 )
+		if( (Dirx != 0 || Diry != 0) && Player_Fuel > 0 )
 		{
 			Vec2 nForce;
+<<<<<<< HEAD
 			nForce.x() = Fuel_Consumption * Dir.x() * PLR_SPEED_MAX;
 			nForce.y() = Fuel_Consumption * Dir.y() * PLR_SPEED_MAX;
+=======
+			nForce.x() = Fuel_Consumption * Dirx * PLR_SPEED_MAX;
+			nForce.y() = Fuel_Consumption * Diry * PLR_SPEED_MAX;
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
 			double Cos = cos( Camera_Rot * 3.1415927f / 180 ), Sin = sin( Camera_Rot * 3.1415927f / 180 );	
 			nForce.set( nForce.x() * Cos + nForce.y() * Sin, nForce.x() * Sin + nForce.y() * Cos );
@@ -309,10 +346,14 @@ void Stranded_Lib::Thread_Update()
 		{
 			Vec2* Inv_Vel = SE_Physics->Body->Velocity( Player_Obj );
 			normalize_v2( *Inv_Vel );
+<<<<<<< HEAD
 
 			static float Decrease_Vel = -0.5f;
 			mul_v2_1( *Inv_Vel, Decrease_Vel );
 //			*Inv_Vel = *Inv_Vel * -0.5f;
+=======
+			mul_v2_1( *Inv_Vel, -0.5f );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
 			Player_Fuel -= Fuel_Consumption * SE_Thread::DT() * PLR_FUEL_DRAINAGE;
 
@@ -336,15 +377,25 @@ void Stranded_Lib::Thread_Update()
 		Vec2 Dist = Triggers[i].Pos - *SE_Physics->Body->Pos_Local(Player_Obj);
 		if( Dist.x() * Dist.x() + Dist.y() * Dist.y() < Triggers[i].Radius_Sqrd )
 		{
+<<<<<<< HEAD
 //			Dialogue.Load( Triggers[i].Conv );
+=======
+			//Dialogue.Load( Triggers[i].Conv );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 			Triggers.erase( Triggers.begin() + i );
 			i--;
 		}
 	}
 
+<<<<<<< HEAD
 //	Dialogue.Update( SE_Thread::Get_DT() );
 //	*SE_Physics->Phys_Enabled() = !Dialogue.In_Dialogue;
 //	is_Playing = !Dialogue.In_Dialogue && Game_Started;
+=======
+	//Dialogue.Update( SE_Thread::Get_DT() );
+	//*SE_Physics->Phys_Enabled() = !Dialogue.In_Dialogue;
+	//is_Playing = !Dialogue.In_Dialogue && Game_Started;
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
 	if( SE_Physics->Body->Pos_Local(Player_Obj)->x() * SE_Physics->Body->Pos_Local(Player_Obj)->x() +
 		SE_Physics->Body->Pos_Local(Player_Obj)->y() * SE_Physics->Body->Pos_Local(Player_Obj)->y() >
@@ -469,8 +520,13 @@ void Stranded_Lib::Thread_Render()
 		glPopMatrix();
 	}
 
+<<<<<<< HEAD
 //	if( Dialogue.In_Dialogue )
 //		Dialogue.Draw();
+=======
+	//if( Dialogue.In_Dialogue )
+	//	Dialogue.Draw();
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 }
 
 void Stranded_Lib::Render_Grav_Node( Grav_Node* mNode )
@@ -609,7 +665,11 @@ void Stranded_Lib::Create_From_Script( std::string Text )
 				ssize_t Fuel_Start = Text.find(":") + 1;
 				std::string Amount_Fuel = Text.substr( Fuel_Start, Text.find("\n") - Fuel_Start );
 				Text.erase( 0, Amount_Fuel.length() + Fuel_Start + 1 );
+<<<<<<< HEAD
 				seLog->Printf( "Stranded", SELOG_DEBUG - 100, "Amount Fuel: %s\n", Amount_Fuel.c_str() );
+=======
+				seLog->Printf( "Stranded", SELOG_INFO, "Amount Fuel: %s\n", Amount_Fuel.c_str() );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 				Fuel_Required = atoi( Amount_Fuel.c_str() );
 
 				// Get Player fuel to start with
@@ -637,7 +697,11 @@ void Stranded_Lib::Create_From_Script( std::string Text )
 
 //				*SE_Physics->Body->Pos_Local( Player_Obj ) = *SE_Physics->Body->Pos_Local(Player_Obj);
 
+<<<<<<< HEAD
 				seLog->Printf( "Stranded", SELOG_DEBUG - 100, "$(d)PLr x/y: %f, %f\n", SE_Physics->Body->Pos_Local(Player_Obj)->x(), SE_Physics->Body->Pos_Local(Player_Obj)->y() );
+=======
+				seLog->Printf( "Stranded", SELOG_INFO, "$(d)PLr x/y: %f, %f\n", SE_Physics->Body->Pos_Local(Player_Obj)->x(), SE_Physics->Body->Pos_Local(Player_Obj)->y() );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
 				State = 1;
 			}break;
@@ -707,7 +771,11 @@ void Stranded_Lib::Create_From_Script( std::string Text )
 
 void Stranded_Lib::Clear_Solar_System() // Just start fresh
 {
+<<<<<<< HEAD
 	seLog->Printf( "Stranded", SELOG_INFO, "$(d)Clearing solar system...\n" );
+=======
+	seLog->Printf( "Stranded", SELOG_NOTICE, "$(d)Clearing solar system...\n" );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
 //	Dialogue.End_Dialogue();
 	Triggers.clear();
@@ -724,9 +792,15 @@ void Stranded_Lib::Clear_Solar_System() // Just start fresh
 	Fuel_Consumption = 25; // per second
 
 	SE_Physics->Body->Pos_Local( Player_Obj )->set( 0, 0 );
+<<<<<<< HEAD
 //	SE_Physics->Body->Velocity( Player_Obj )->set( 0, 0 );
 //	Vec2 Stop;
 //	SE_Physics->Body->set_Velocity( &Stop, Player_Obj );
+=======
+//	SE_Physics->Body->Velocity( Player_Obj )-.set( 0, 0 );
+//	Vec2 Stop;
+//	SE_Physics->Body-.set_Velocity( &Stop, Player_Obj );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
 	Grav_Node* Sun_Temp = Sun;
 	Sun = NULL;
@@ -741,25 +815,43 @@ void Stranded_Lib::Escaped_Solar_System() // Next time!
 	Solar_System_Radius_Sqrd = -1;
 	Vec2 Stop;
 	SE_Physics->Body->Set_Velocity( &Stop, Player_Obj );
+<<<<<<< HEAD
 //	SE_Physics->Body->Pos_Local( Player_Obj )->set( 0, 0 );
+=======
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
-	if( Solar_System_Next.length() > 0 )
+//	SE_Physics->Body->Pos_Local( Player_Obj )-.set( 0, 0 );
+
+	if( Solar_System_Next.length() > 0 && SE_Lua )
 	{
 		Solar_System_Current = Solar_System_Next;
 		seLog->Printf( "Stranded", SELOG_NOTICE, "Escaped solarsystem!\n" );
 		if( SE_Lua->Do_File( "assets/solar_systems/" + Solar_System_Next + ".lua" )
 			== SE_SUCCESS )
 		{
+<<<<<<< HEAD
 //			SE_Physics->Body->set_Velocity( &Stop, Player_Obj );
 //			SE_Physics->Body->Pos_Local( Player_Obj )->set( 0, 0 );
+=======
+//			SE_Physics->Body-.set_Velocity( &Stop, Player_Obj );
+//			SE_Physics->Body->Pos_Local( Player_Obj )-.set( 0, 0 );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 			return;
 		}
 	}
 
 	// Everything failed, go to title
+<<<<<<< HEAD
 	seLog->Printf( "Stranded", SELOG_NOTICE, "Going to title...\n" );
 	S_Engine::Event_Add_Engine( new SE_Events::Event_Var<std::string>( S_Engine::Get_Module_Generic("gui"), Event_GUI::EVENT_MENU_LOAD, "title" ) );
 	SE_Lua->Do_File( "assets/solar_systems/title.lua" );
+=======
+	seLog->Printf( "Stranded", SELOG_ERROR, "Going to title...\n" );
+	SE_Event_Lib::ThrowTag <std::string> ( "menu/load", "title" );
+
+	if( SE_Lua )
+		SE_Lua->Do_File( "assets/solar_systems/title.lua" );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 }
 
 
@@ -801,7 +893,7 @@ void Stranded_Lib::Register_Gravnode( Grav_Node* nNode )
 #ifdef _DEPRECATED
 // DIALOGUE
 #include <sstream>
-void m_Dialogue_Man::Draw()
+/*void m_Dialogue_Man::Draw()
 {
 	glPushMatrix();
 
@@ -813,7 +905,7 @@ void m_Dialogue_Man::Draw()
 
 //	glColor4f( 0.4f, 0.4f, 0.4f, 0.7f );
 	
-	segl->Use_Texture( Resources::Dialog_Border );
+/*	segl->Use_Texture( Resources::Dialog_Border );
 					  
 	glBegin( GL_QUADS );							   
 		glTexCoord2f(0, 0);glVertex2f(0, SE_Window->Get_H() - 200);// CHAT BOX
@@ -872,12 +964,16 @@ void m_Dialogue_Man::Draw()
 void m_Dialogue_Man::Play_Tick_Noise()
 {
 
+<<<<<<< HEAD
 }
 #endif
+=======
+}*/
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
 void Stranded_Lib::Key_Trigger_Dialogue( sshort* Data )
 {
-	if( *Data == false )
+	if( Data == false )
 		return;
 
 //	Dialogue.Next_Dialogue();
@@ -888,19 +984,31 @@ void Stranded_Lib::Key_Reset( sshort* Data )
 	if( *Data == false )
 		return;
 
-	SE_Lua->Do_File( "assets/solar_systems/" + Solar_System_Current + ".lua" );
+	if( SE_Lua )
+		SE_Lua->Do_File( "assets/solar_systems/" + Solar_System_Current + ".lua" );
 }
 
 // MODULE
 uint Stranded_Lib::Register_Module( const char* )
 {
-	m_Mod = S_Engine::Generate_Module( "stranded" );
+//	m_Mod = S_Engine::Generate_Module( "stranded" );
 
+<<<<<<< HEAD
 	SE_Scheduler = (SE_Scheduler_Interface*) SE_Mod_Plugin::Get( "scheduler", SE_SCHEDULER_HEADER_VER );
+=======
+	seLog = (SE_Log_Interface*) SE_Mod_Plugin::Get( "logger", NULL );
+	segl = (segl_Interface*) SE_Mod_Plugin::Get( "segl", NULL );
+	SE_GUI = (SE_GUI_Interface*) SE_Mod_Plugin::Get( "gui", NULL );//SE_GUI_HEADER_VER );
+	SE_Filesys = (SE_Filesys_Interface*) SE_Mod_Plugin::Get( "filesys", NULL );
+	SE_Window = (SE_Window_Interface*) SE_Mod_Plugin::Get( "window", NULL );
+	SE_Physics = (SE_Physics_Interface*) SE_Mod_Plugin::Get( "physics-2D", NULL );
+	SE_Lua = (SE_Lua_Interface*) SE_Mod_Plugin::Get( "lua", NULL );
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
-	S_Engine::Register_Module_Engine( m_Mod, S_Engine::Reg_Mod_Time::MED_LEVEL + 50, Initialize, Cleanup );
-	S_Engine::Register_Module_Render( m_Mod, S_Engine::Reg_Mod_Time::MED_LEVEL + 50, Resources::Load, NULL );
+	if( SE_Lua == NULL || SE_Physics == NULL )
+		return SE_FAILURE;
 
+<<<<<<< HEAD
 	SE_Scheduler->Insert_Pos( seSchedule_Render(), Thread_Render, S_Engine::Module_Positions::POS_MED + 20, 64 );
 	SE_Scheduler->Insert_Pos( seSchedule_Update(), Thread_Update, S_Engine::Module_Positions::POS_MED + 20, 64 );
 
@@ -917,6 +1025,20 @@ uint Stranded_Lib::Register_Module( const char* )
 	SE_Window = (SE_Window_Interface*) SE_Mod_Plugin::Get( "window", NULL );
 	SE_Physics = (SE_Physics_Interface*) SE_Mod_Plugin::Get( "physics", "2D" );
 	SE_Lua = (SE_Lua_Interface*) SE_Mod_Plugin::Get( "lua", NULL );
+=======
+	S_Engine::Register_Module_Engine( S_Engine::Reg_Mod_Time::MED_LEVEL + 50, Initialize, Cleanup );
+	S_Engine::Register_Module_Render( S_Engine::Reg_Mod_Time::MED_LEVEL + 50, Resources::Load, NULL );
+
+/*	S_Engine::Register_Module_Thread_Render( Thread_Render, S_Engine::Module_Positions::POS_MED + 20, 128 );
+	S_Engine::Register_Module_Thread_Logic( Thread_Update, S_Engine::Module_Positions::POS_MED + 20, 128 );
+
+	//.set zoom render before / after physics render
+	S_Engine::Register_Module_Thread_Render( Thread_Render_Zoom_Push, S_Engine::Module_Positions::POS_MED - 1, 64 );
+	S_Engine::Register_Module_Thread_Render( Thread_Render_Zoom_Pop, S_Engine::Module_Positions::POS_MED + 1, 64 );
+*/
+//	S_Engine::Register_Module_Thread_Render( Thread_Render_Dialogue, S_Engine::Module_Positions::POS_MED + 10, 64 );
+
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
 
 	return SE_SUCCESS;
 }
@@ -931,7 +1053,20 @@ void* Stranded_Lib::Module_Interface( const char* )
 	return segl;
 }
 
+uint seModule_Interrogate( uint Level, uint* Prog ) // like init
+{
+	for( ; (*Prog) < 2; (*Prog)++ )
+	{switch (*Prog){
+		case 0:
+			Create_Interface();
+			break;
+		case 1:
+			if( Register_Module( NULL ) != SE_SUCCESS )
+				return SE_FAILURE;
+			break;
+	}}
 
+<<<<<<< HEAD
 uint seModule_Interrogate( uint Level, uint* Prog ) // like init
 {
 	for( ; *Prog < 1; (*Prog)++ )
@@ -950,9 +1085,37 @@ void seModule_Cleanup()
 {
 
 }
+=======
+	return SE_SUCCESS;
+}
+
+void seModule_Cleanup()
+{
+
+}
 
 void* seModule_Interface()
 {
 	return NULL;
 }
+
+extern "C" {
+/*
+DLL_EXPORT SE_Mod_Plugin_Interface SE_Plugin_Data = {
+		__DATE__ ", " __TIME__,
+		"stranded-core",
+		"Stranded Core Utility",
+		Stranded_Lib::Create_Interface,
+		Stranded_Lib::Register_Module,
+		Stranded_Lib::Module_Interface
+};
+>>>>>>> 3071c16e89baa5ddd386dd11b642f44815affce1
+
+void* seModule_Interface()
+{
+	return NULL;
+}
+*/
+
+
 
